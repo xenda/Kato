@@ -1,5 +1,24 @@
 Kato::Application.routes.draw do
-  devise_for :users
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  resources :votes
+
+  resources :categories
+
+  resources :messages
+
+  devise_for :users do
+    post 'users/fb_auth(.:format)' => "devise/facebook_consumer#auth"
+    post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"            
+  end
+  
+  resource :users do
+    post 'users/fb_auth(.:format)' => "devise/facebook_consumer#auth"
+    post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"        
+  end
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -5,10 +5,12 @@
   <%= include_stylesheets :app %>
   <%= include_javascripts :app %>
   <%= csrf_meta_tag %>
+  
 </head>
 <body>
-
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
 
 </body>
 </html>

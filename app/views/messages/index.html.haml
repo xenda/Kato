@@ -1,0 +1,16 @@
+- if @data
+  = @data.inspect
+  
+- if current_user
+  Hola
+  = current_user.inspect
+
+= simple_form_for @message do |f|
+  = f.input :title, :label => "Tu idea"
+  = f.input :content, :label => "Coméntala"
+  = f.association :category
+  = f.submit 'Save'
+
+#messages_list
+  = render @messages
+  

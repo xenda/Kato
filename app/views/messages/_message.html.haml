@@ -1,0 +1,12 @@
+%p
+  %b User:
+  = @message.try(:user).try(:name)
+%p
+  = @message.title
+%p
+  = @message.content
+%p
+  = @message.try(:category).try(:name)
+%p
+  %b Votos:
+  = @message.votes_count

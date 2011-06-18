@@ -30,8 +30,18 @@ gem 'mysql2', '0.2.10'
 #   gem 'webrat'
 # end
 gem "devise"
+gem "oauth2", :git => "git@github.com:xenda/oauth2.git", :branch => "xenda_fix"
+gem "fbgraph", :git => "git@github.com:xenda/fbgraph.git"
+gem 'devise_oauth2_canvas_facebook'
+# gem 'devise_oauth2_canvas_facebook', :path => "/Users/alvaropereyrarabanal/Development/devise_oauth2_canvas_facebook"
+
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jammit"
 gem "jquery-rails"
-gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
+# gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
+gem 'activeadmin'
+gem "simple_form"
+gem "inherited_resources"
+gem "fb_graph"
+gem 'rails-footnotes', '>= 3.7', :group => :development

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @message.user
+%p
+  %b Title:
+  = @message.title
+%p
+  %b Content:
+  = @message.content
+%p
+  %b Category:
+  = @message.category
+%p
+  %b Votes count:
+  = @message.votes_count
+
+= link_to 'Edit', edit_message_path(@message)
+\|
+= link_to 'Back', messages_path
