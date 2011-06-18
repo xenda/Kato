@@ -30,8 +30,8 @@ gem 'mysql2', '0.2.10'
 #   gem 'webrat'
 # end
 gem "devise"
-gem "oauth2", :git => "git://github.com:xenda/oauth2.git", :branch => "xenda_fix"
-gem "fbgraph", :git => "git://github.com:xenda/fbgraph.git"
+gem "oauth2", :git => "git://github.com/xenda/oauth2.git", :branch => "xenda_fix"
+gem "fbgraph", :git => "git://github.com/xenda/fbgraph.git"
 gem 'devise_oauth2_canvas_facebook'
 # gem 'devise_oauth2_canvas_facebook', :path => "/Users/alvaropereyrarabanal/Development/devise_oauth2_canvas_facebook"
 

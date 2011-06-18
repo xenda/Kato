@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:xenda/fbgraph.git
-  revision: 2f5ce97bb035628dcf1d8534f93951e809b88b64
+  remote: git://github.com/xenda/fbgraph.git
+  revision: db46f8021dff5d881ec08ba5643b227249b055b5
   specs:
     fbgraph (1.8.0)
       activesupport
@@ -19,7 +19,7 @@ GIT
       typhoeus
 
 GIT
-  remote: git@github.com:xenda/oauth2.git
+  remote: git://github.com/xenda/oauth2.git
   revision: 3a0a9f7c2d130fa8a88a1f6906dcb47232957592
   branch: xenda_fix
   specs:
