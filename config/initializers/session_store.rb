@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-Kato::Application.config.session_store :cookie_store, :key => '_kato_session', :domain => "http://apps.facebook.com/"
+Kato::Application.config.session_store :cookie_store, :key => '_kato_session'# , :domain => "http://apps.facebook.com/"
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

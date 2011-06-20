@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   
   def index
     @message = Message.new
-    @messages = Message.all
+    @messages = Message.order("created_at DESC").all
     if params[:signed_request]
 
       
