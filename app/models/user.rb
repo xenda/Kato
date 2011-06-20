@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
   has_many :messages
   has_many :votes
   
+  def update_facebook_user(fb_user, client, options)
+    self.name = fb_user.name.to_s.downcase if fb_user.name.present?
+  end
+  
+  
 end

@@ -2,15 +2,24 @@
 <html>
 <head>
   <title>Kato</title>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&v1' rel='stylesheet' type='text/css'>
   <%= include_stylesheets :app %>
   <%= include_javascripts :app %>
   <%= csrf_meta_tag %>
-  
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
+  
+  <div id="logo">
+    BBVA Continental - 3er Concurso PeruGourmet
+  </div>
+
+  
+  <div class="wrapper">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>    
+
+  </div>
 
 </body>
 </html>
