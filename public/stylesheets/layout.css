@@ -42,9 +42,6 @@ box-shadow: 0px 0px 10px 0px #11162e;
 	background-color: white;
 	overflow: auto;
 	padding: 20px;
--webkit-gradient(radial, 353 147, 100, 324 0, 1000, from(#FCFCFC), to(#F0F0F0), color-stop(.6,#CFCFCF))
-
-
 }
 
 h1 { font-family: 'Droid Serif', arial, serif; 
@@ -208,10 +205,23 @@ form {
     outline: none;
     padding: 8px 10px; }
     form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=url]:focus, form input[type=tel]:focus, form textarea:focus {
-      border: 1px solid #99a2aa;
-      box-shadow: 0 0 4px #99a2aa;
-      -moz-box-shadow: 0 0 4px #99a2aa;
-      -webkit-box-shadow: 0 0 4px #99a2aa; }
+      border: 1px solid #c3c9ce;
+      box-shadow: 0 0 2px #0352a7;
+      -moz-box-shadow: 0 0 2px #0352a7;
+      -webkit-box-shadow: 0 0 5px #0352a7;
+      outline: 0px !important; 
+      }
+
+input#message_title.string.required {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+textarea#message_content.text.optional {
+	font-size: 12px;
+	color: #7d7d7d;
+	height: 100px;
+}
   form fieldset > ol > li {
     /* Hints */
     /* Date and Time Fields */
@@ -284,12 +294,32 @@ form {
     text-shadow: black 0 1px 0;
     text-decoration: none;
     margin-right: 3px;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1.0em;
     cursor: pointer;
     padding: .6em 1.4em .5em 1.3em;
     border: none;
-    color: #efefef; }
+    color: #f7f7f7;
+	font-style: normal;
+}
+
+#messages_list li.message div.meta_data div.votes div.vote_count {
+	float: left;
+	margin-right: 10px;	
+	padding: 4px 8px;
+	font-size: 11px;
+	background-color: #fffeff;
+	color: #24628f;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px
+}
+
+#messages_list li.message div.meta_data div.votes div.submit{
+	float: right;
+}
+
+
     form input[type=submit]:hover {
       color: #fff;
       box-shadow: 0 1px 3px #888888;
@@ -363,3 +393,43 @@ form {
         form fieldset.buttons li.cancel a span.icon svg {
           width: 9px;
           height: 9px; }
+
+
+
+ul#messages_list {
+	padding: 10px;
+	overflow: auto;
+}
+
+ul#messages_list li {
+	float: left;
+	margin-right: 20px;
+	padding: 10px;
+	width: 200px;
+		-webkit-box-shadow: 0px 0px 10px 0px #ccd6e3;
+-moz-box-shadow: 0px 0px 10px 0px #ccd6e3;
+box-shadow: 0px 0px 10px 0px #ccd6e3;
+	/*background-color: #ccd6e3;*/
+		background-color: #eef6fb;
+	list-style-type: none;
+}
+
+.message input#vote_submit.button {
+	font-size: 10px;
+	font-weight: lighter;
+	
+	    background: #2d61a7; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#5c7ca6), to(#2d61a7));
+    background: -moz-linear-gradient(-90deg, #5c7ca6, #3469a8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
+	
+	
+	
+}
+
+#messages_list li.message h4 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
