@@ -6,6 +6,7 @@ class VotesController < InheritedResources::Base
   def create
     @vote = Vote.new(params[:vote])
     @vote.user = current_user
+    @message = @vote.message
     create!
   end
 end
