@@ -1,4 +1,4 @@
-%li.message
+%li.message{:id => "message_#{message.id}"}
   %h4= message.title
   .content= simple_format message.content
   .meta_data
@@ -10,4 +10,5 @@
         votos
       .submit
         = simple_form_for Vote.new(:message_id => message.id), :remote => true do |f|
+          = f.input :message_id, :as => :hidden
           = f.button :submit, "Votar"

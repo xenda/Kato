@@ -1,0 +1,1 @@
+$('#message_<%= @vote.message.id %>').replaceWith('<%= escape_javascript(render(:partial => "/messages/message", :object =>@vote.message)) %>');
