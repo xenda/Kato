@@ -16,7 +16,7 @@ class MessagesController < InheritedResources::Base
   
   def send_to_pusher
     if @message.errors.empty?
-      Pusher['alpha-kato'].trigger!('message:create', @message.attributes)
+      Pusher['alpha-kato'].trigger!('message:create', {:id => @message.id, :title => @message.title, :content => @message.content, :votes_count => @message.votes_count})
     end
   end
   
