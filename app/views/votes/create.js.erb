@@ -1,2 +1,4 @@
 <% @message.reload %> 
 $('#message_<%= @message.id %> .votes').html('<%= escape_javascript(render(:partial => "/messages/message_data", :object =>@message)) %>');
+
+ streamPublish("3er Concurso Peru Gourmet",'<%= @message.title %>','<%= message_url(@message) %>','<%=  @message.content.strip.split.join(' ') %>','Vota por tu receta para el éxito');
