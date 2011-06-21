@@ -5,10 +5,4 @@
     .avatar
     .name= message.try(:user).try(:name)
     .votes
-      .vote_count
-        = message.votes_count
-        votos
-      .submit
-        = simple_form_for Vote.new(:message_id => message.id), :remote => true do |f|
-          = f.input :message_id, :as => :hidden
-          = f.button :submit, "Votar"
+      = render :partial => "messages/message_data", :object => message

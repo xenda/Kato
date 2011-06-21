@@ -1,0 +1,7 @@
+.vote_count
+  = message_data.votes_count
+  votos
+.submit
+  = simple_form_for Vote.new(:message_id => message_data.id), :remote => true do |f|
+    = f.input :message_id, :as => :hidden
+    = f.button :submit, "Votar"

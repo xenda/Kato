@@ -1,2 +1,2 @@
 <% @message.reload %> 
-$('#message_<%= @message.id %>').replaceWith('<%= escape_javascript(render(:partial => "/messages/message", :object =>@message)) %>');
+$('#message_<%= @message.id %> .votes').html('<%= escape_javascript(render(:partial => "/messages/message_data", :object =>@message)) %>');

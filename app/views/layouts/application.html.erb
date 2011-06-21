@@ -4,7 +4,6 @@
   <title>Kato</title>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&v1' rel='stylesheet' type='text/css'>
   <%= include_stylesheets :app %>
-  <%= include_javascripts :app %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -30,5 +29,6 @@
   xfbml : true // parse XFBML
   });
   </script>
+  <%= include_javascripts :app %>  
 </body>
 </html>
