@@ -42,7 +42,7 @@ $(function(){
 
   $(".oembed").oembed(null,
     {
-      embedMethod:"append", maxWidth:"220",
+      embedMethod:"append", maxWidth:"240",
       afterEmbed: function(oembedData) {
         $container.imagesLoaded(function(){
           $container.masonry( 'reload' );})
