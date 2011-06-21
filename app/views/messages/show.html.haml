@@ -1,21 +1,13 @@
-%p#notice= notice
+%ul#messages_list
+  %li.message{:id => "message_#{@message.id}"}
+    %h4= @message.title
+    .content= simple_format @message.content
+    .meta_data
+      .avatar
+      .name= @message.try(:user).try(:name)
+      .votes
+        = render :partial => "messages/message_data", :object => @message
 
-%p
-  %b User:
-  = @message.user
-%p
-  %b Title:
-  = @message.title
-%p
-  %b Content:
-  = @message.content
-%p
-  %b Category:
-  = @message.category
-%p
-  %b Votes count:
-  = @message.votes_count
-
-= link_to 'Edit', edit_message_path(@message)
-\|
-= link_to 'Back', messages_path
+  #fb-root
+  %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+  %fb:comments{:href => message_url(@message), :num_posts => "10", :width => "500"}

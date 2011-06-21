@@ -17,6 +17,7 @@ class HomeController < ApplicationController
           logger.info @data["user"].inspect
           user = @data["user_id"]
           token = @data["oauth_token"]
+          
           resource = User.find_by_facebook_uid(user)
           if User.respond_to?(:serialize_into_cookie)
             resource.remember_me!

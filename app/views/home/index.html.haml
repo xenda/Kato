@@ -17,3 +17,6 @@
 
 %ul#messages_list
   = render @messages
+
+%div{:style=>"display:none;"}
+  = @data.inspect if @data

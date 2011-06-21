@@ -1,5 +1,5 @@
 %li.message{:id => "message_#{message.id}"}
-  %h4= message.title
+  %h4= link_to message.title, message
   .content= simple_format message.content
   .meta_data
     .avatar

@@ -1,16 +1,19 @@
-- if @data
-  = @data.inspect
-  
-- if current_user
-  Hola
-  = current_user.inspect
+%h1 Participa y envíanos tu receta
+- if current_user && current_user.name
+  %h2
+    Hola 
+    = current_user.name
+    Envíanos tu receta para un Perú adelante
+
+%ul#categories
+  - Category.all.each do |c|
+    %li= link_to c.name, "#"
 
 = simple_form_for @message do |f|
-  = f.input :title, :label => "Tu idea"
-  = f.input :content, :label => "Coméntala"
-  = f.association :category
-  = f.submit 'Save'
+  = f.input :title, :label => false
+  = f.input :content, :label => false
+  = f.association :category, :label => "Categoría"
+  = f.submit 'Enviar receta'
 
-#messages_list
+%ul#messages_list
   = render @messages
-  
