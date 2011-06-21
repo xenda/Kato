@@ -7,4 +7,5 @@ javascripts:
     - public/javascripts/application.js
 stylesheets:
   app:
-    - public/stylesheets/*.css
+    - public/stylesheets/scaffold.css
+    - public/stylesheets/layout.css
