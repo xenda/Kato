@@ -2,7 +2,7 @@
 - if current_user && current_user.name
   %h2
     Hola 
-    = current_user.name
+    %span.name= current_user.name
     Envíanos tu receta para un Perú adelante
 
 %ul#categories
@@ -12,6 +12,7 @@
 = simple_form_for @message do |f|
   = f.input :title, :label => false
   = f.input :content, :label => false
+  = f.input :user_id, :as => :hidden, :value => current_user.id if current_user
   = f.association :category, :label => "Categoría"
   = f.submit 'Enviar receta'
 

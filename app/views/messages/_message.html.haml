@@ -3,6 +3,8 @@
   .content= simple_format message.content
   .meta_data
     .avatar
+      - if message.user
+        = image_url "http://graph.facebook.com/#{message.user.facebook_uid}/picture", :size => "20x20"
     .name= message.try(:user).try(:name)
     .votes
       = render :partial => "messages/message_data", :object => message

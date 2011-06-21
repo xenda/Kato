@@ -44,11 +44,24 @@ box-shadow: 0px 0px 10px 0px #11162e;
 	padding: 20px;
 }
 
-h1 { font-family: 'Droid Serif', arial, serif; 
+h1, h2 { font-family: 'Droid Serif', arial, serif; 
 margin: 0px; margin-bottom: 10px;
 font-size: 26px;
 	color: #0352a7;
 }
+
+h2 {
+  
+  font-size: 20px;
+  
+}
+
+h2 span.name {
+  
+  text-transform: capitalize;
+  
+}
+
 
 div#logo {
 	-webkit-box-shadow: 0px 0px 10px 0px #11162e;
