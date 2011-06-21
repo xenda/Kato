@@ -81,6 +81,12 @@ function addNewMessage(data){
   // var data = [];
   // data['id']  = "lala";
   $("#messages_list").prepend('<li class="message" id="message_'+ data["id"] +'"><h4><a href="/messages/'+data["id"]+'">'+ data["title"]+'</a></h4><div class="content">'+ data["content"] +'</div><div class="meta_data"> <div class="avatar"></div> <div class="name"></div> <div class="votes"><div class="vote_count"> '+ data["votes_count"]+' votos</div> <div class="submit"> <form accept-charset="UTF-8" action="/votes" class="simple_form vote" data-remote="true"   id="new_vote" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="'+ token +'"></div> <input class="hidden" id="vote_message_id" name="vote[message_id]" type="hidden" value="'+ data["id"]+'"> <input class="button" id="vote_submit" name="commit" type="submit" value="Votar"> </form> </div> </div> </div> </li>');
+
+  var $container = $('#messages_list');
+  $container.imagesLoaded(function(){
+    $container.masonry( 'reload' );
+  })
+
 }
 
 function updateVotesCount(data){
