@@ -88,7 +88,8 @@ function updateVotesCount(data){
   var token = $('meta[name="csrf-token"]').attr('content')
   
   $('#message_' + data['message_id'] + ' .votes').html('<div class=\'vote_count\'>\n'+ data['votes_count'] +  '\nvotos\n<\/div>\n<div class=\'submit\'>\n<form accept-charset=\"UTF-8\" action=\"/votes\" class=\"simple_form vote\" data-remote=\"true\" id=\"new_vote\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"' + token +'\" /><\/div>\n<input class=\"hidden\" id=\"vote_message_id\" name=\"vote[message_id]\" type=\"hidden\" value=\"'+ data['message_id'] + '\" />\n<input class=\"button\" id=\"vote_submit\" name=\"commit\" type=\"submit\" value=\"Votar\" />\n<\/form>\n<\/div>\n');
-  
+ 
+  $("#message_" + data['message_id']).effect("shake", { distance: 3, times: 5}, 100).effect("highlight", {}, 1000);   
 }
 
 function streamPublish(name, caption, link, description){        

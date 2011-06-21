@@ -3,6 +3,7 @@ javascripts:
     - public/javascripts/jquery.min.js
     - public/javascripts/jquery.masonry.min.js
     - public/javascripts/jquery_ujs.js
+    - public/javascripts/jquery_ui.custom.min.js
     - public/javascripts/jquery.oembed.min.js
     - public/javascripts/application.js
 stylesheets:
