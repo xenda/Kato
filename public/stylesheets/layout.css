@@ -193,6 +193,7 @@ div#logo h1 a {
 	display: block;
 	text-indent: -9999px;
 	background: url(../images/logo_bbva.png) no-repeat;
+	overflow: hidden;
 }
 h2#contest_logo {
 	overflow: auto;
