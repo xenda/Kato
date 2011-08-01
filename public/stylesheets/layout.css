@@ -601,6 +601,7 @@ textarea#message_content.text.optional {
 	box-shadow: inset 0px 1px 1px 0px #000;
 	margin-top: 0px !important;
 	margin-right: 0px;
+	font-weight: bold;
 
 }
 
@@ -619,9 +620,9 @@ textarea#message_content.text.optional {
         fill: white !important; }
     form input[type=submit]:active,
     a.button:active {
-      box-shadow: inset 0 1px 2px black;
-      -moz-box-shadow: inset 0 1px 2px black;
-      -webkit-box-shadow: inset 0 1px 2px black; }
+      box-shadow: inset 0 1px 2px black !important;
+      -moz-box-shadow: inset 0 1px 2px black !important;
+      -webkit-box-shadow: inset 0 1px 2px black !important; }
 
   form fieldset.buttons li {
     float: left;
@@ -808,14 +809,18 @@ div.meta_data {
 
 .message input#vote_submit.button,
 a.button {
-	font-size: 10px;
-	font-weight: lighter;
 	background-color: #2d61a7; 
     background: -webkit-gradient(linear, left top, left bottom, from(#5c7ca6), to(#2d61a7));
     background: -moz-linear-gradient(-90deg, #5c7ca6, #3469a8);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
 	margin-right: 0px;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	font: normal 11px Helvetica, Geneva, sans-serif;
+	      box-shadow: inset 0 1px 1px #7591b5;
+      -moz-box-shadow: inset 0 1px 4px #7591b5;
+      -webkit-box-shadow: inset 1 1px 1px #7591b5;
 }
 
 a.button {
