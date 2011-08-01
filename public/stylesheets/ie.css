@@ -3,13 +3,8 @@ a img{
 }
 
 #messages_list, .meta_data{
-  overflow: hidden;
+  overflow: hidden !important;
 }
-
-.wrapper, div#footnotes_debug, form fieldset.inputs, form fieldset legend span, form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=url]:focus, form input[type=tel]:focus, form textarea:focus, orm input[type=submit], a.button, form input[type=submit]:hover, form input[type=submit]:active,
-    a.button:active, form fieldset.buttons li.cancel a, form fieldset.buttons li.cancel a:hover, form fieldset.buttons li.cancel a:active, #messages_list li,
-ul#most_voted li,
-div.message, form fieldset.inputs, form input[type=submit],a.button, #messages_list .message div.meta_data div.votes div.vote_count,
-#most_voted .message div.meta_data div.votes div.vote_count, form fieldset.buttons li.cancel a, a.button, form fieldset, form input[type=submit]{
-  behavior: url('/stylesheets/ie-css3.htc');
+.meta_data{
+  padding-left:5px;
 }
