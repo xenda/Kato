@@ -568,8 +568,11 @@ $('li.message').mouseover(function(){
   var id = '#tooltip_' + $(this).attr('id');
   if($(id).css('display')=='none')
     $(id).fadeIn('fast');
-});
-$('li.message').mouseout(function(){
+}).mousemove(function(){
+  var id = '#tooltip_' + $(this).attr('id');
+  if($(id).css('display')=='none')
+    $(id).fadeIn('fast');
+}).mouseout(function(){
   var id = '#tooltip_' + $(this).attr('id');
   if($(id).css('display')=='block')
     $(id).fadeOut('fast');
