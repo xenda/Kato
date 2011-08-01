@@ -509,15 +509,6 @@ this.style.removeAttribute("filter");c.callback&&c.callback.apply(this,arguments
 
 })(jQuery);
 
-  window.fbAsyncInit = function() {
-  FB.Canvas.setSize();
-  }
-// Do things that will sometimes call sizeChangeCallback()
-function sizeChangeCallback() {
-  FB.Canvas.setSize();
-
-}
-
 
 $(function(){
 
@@ -528,6 +519,17 @@ $(function(){
   //     isAnimated : true
   //   });
   // });
+
+window.fbAsyncInit = function() {
+  FB.Canvas.setSize();
+}
+
+// Do things that will sometimes call sizeChangeCallback()
+
+function sizeChangeCallback() {
+  FB.Canvas.setSize();
+}
+
 
 $("li.message").tipsy({gravity: 's', fade:true});
 
