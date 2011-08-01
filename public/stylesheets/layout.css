@@ -920,12 +920,12 @@ div.photo_zone a {
 .tooltip {
   display:none;
 	position: absolute;
+  width:100px;
+  max-width: 150px;
 	height: auto;
 	z-index: 50;
   top:0;
   left:0;
-  width:100px;
-  max-width: 150px;
 	background: black !important;
 	color:white;
 	text-align: center;
