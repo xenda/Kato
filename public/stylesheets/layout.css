@@ -921,4 +921,7 @@ div.photo_zone a {
   box-shadow:2px 2px 3px #000;
   -moz-box-shadow:2px 2px 3px #000;
   -webkit-box-shadow:2px 2px 3px;
+  margin-top:80px;
+  margin-left:40px;
+  opacity:0.7;
 }
