@@ -27,8 +27,7 @@ $('li.message').each(function(index,item){
 $('li.message').mouseover(function(){
   var id = '#tooltip_' + $(this).attr('id');
   $(id).fadeIn('fast');
-});
-$('li.message').mouseout(function(){
+}).mouseout(function(){
   var id = '#tooltip_' + $(this).attr('id');
   $(id).fadeOut('fast');
 });
