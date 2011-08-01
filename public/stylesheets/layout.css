@@ -42,9 +42,9 @@ a img{
 
 div.content_list {
 	float: left;
-	width: 530px;
+	width: 510px;
 	padding-right: 6px;
-	margin-right: 13px;
+	margin-right: 18px;
 	border-right: 1px solid #e8e8e8;
 }
 
@@ -86,7 +86,7 @@ div.inner div.tipsy {
 }
 div.sidebar {
 	float: left;
-	width: 180px;
+	width: 165px;
 	padding-top: 10px;
 }
 div.input {
@@ -111,7 +111,7 @@ box-shadow: 0px 0px 10px 0px #11162e;
 	padding: 10px;
 	padding-left: 20px;
 	clear: both;
-	width: 730px;
+	width: 710px;
 }
 
 #header ul {
@@ -141,7 +141,9 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
-
+#header ul li.like {
+	margin-top: 4px;
+}
 label.optional {
 	display: block;
 	font-family: Arial, Helvetica, Geneva, sans-serif;
@@ -686,7 +688,7 @@ div.message {
 	float: left;
 	margin-right: 10px;
 	width: 180px;
-	width: 165px;
+	width: 155px;
 	-webkit-box-shadow: 0px 0px 8px 1px #c1c1c1;
 	/*#ccd6e3*/
   -moz-box-shadow: 0px 0px 8px 1px #c1c1c1;
@@ -758,7 +760,7 @@ div.icons a:hover {
 
 div.photo_zone {
 	text-align: center;
-	height: 120px;
+	height: 110px;
 	overflow: hidden;
 }
 
