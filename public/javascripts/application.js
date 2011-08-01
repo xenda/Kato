@@ -65,12 +65,13 @@ function updateVotesCount(data){
 }
 
 function streamPublish(name, caption, link, description,picture){
-    FB.ui({ method : 'feed',
-            name: name,
-            caption: caption,
-            link   :  link,
-            description: description,
-            picture: picture
+    FB.ui({ method  : 'feed',
+            name    : name,
+            link    :  link,
+            picture : picture,
+            caption : caption,
+            description: description
+
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
