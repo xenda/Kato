@@ -32,7 +32,6 @@ $('li.message').mouseover(function(){
     $(id).show();
 }).mouseout(function(){
   var id = '#tooltip_' + $(this).attr('id');
-  if($(id).css('display')=='block')
     $(id).fadeOut('fast');
 });
 
