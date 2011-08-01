@@ -520,12 +520,6 @@ $(function(){
   //   });
   // });
 
-if (window.PIE) {
-  $('#messages_list li, ul#most_voted li, div.message').each(function(){
-    PIE.attach(this);
-  });
-}
-
 window.fbAsyncInit = function() {
   FB.Canvas.setSize();
 }
