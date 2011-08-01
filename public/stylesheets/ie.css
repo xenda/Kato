@@ -11,5 +11,5 @@ a img{
 ul#most_voted li,
 div.message, form fieldset.inputs, form input[type=submit],a.button, #messages_list .message div.meta_data div.votes div.vote_count,
 #most_voted .message div.meta_data div.votes div.vote_count, form fieldset.buttons li.cancel a, a.button, form fieldset, form input[type=submit]{
-  behavior: url(/stylesheets/ie-css3.htc);
+  behavior: url('/stylesheets/ie-css3.htc');
 }
