@@ -1,9 +1,9 @@
 .inner
   #messages_list
+    %h3{:class=>recipe_color(@message)}= @message.title
     .message{:id => "message_#{@message.id}", :title => @message.title}
       .share_zone
         .title
-          = link_to truncate(@message.title, :length => 140), @message, :title => @message.title
         .icons
           = link_to "Facebook", "#", :class => "facebook_icon"
           = link_to "Twitter", "#", :class => "twitter_icon"
@@ -24,7 +24,7 @@
       .content
         = simple_format @message.ingredients
     .how_to
-      %h3 ¿Cómo prepararla?
+      %h3 Preparación
       .content
         = simple_format @message.content
 

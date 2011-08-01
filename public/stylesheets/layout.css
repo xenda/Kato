@@ -21,7 +21,7 @@ background-image: -moz-linear-gradient(
 
 	margin: 0px;
 	padding: 10px;
-
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .sidebar h3 {
@@ -40,6 +40,7 @@ div.content_list {
 
 div.message_content {
 	overflow: auto;	
+	padding-left: 20px;
 }
 
 div.ingredients {
@@ -96,13 +97,14 @@ textarea.text {
 box-shadow: 0px 0px 10px 0px #11162e;
 	background-color: white;
 	overflow: auto;
-	padding: 20px;
+	padding: 10px;
 	clear: both;
+	width: 810px;
 }
 
 #header ul {
 	float: left;
-	margin-left: 20px;
+	margin-left: 400px;
 }
 
 #header ul li {
@@ -158,13 +160,108 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 	margin-bottom: 10px;
 	float: left;
 }
-
 div#logo h1 {
-	float: left;
+	overflow: auto;
+	font-family: Arial;
+	text-indent: -9999px;
+}
+
+.section_header h3.left {
+	margin-top: 0px;
+}
+div#logo h1 a {
+	/*float: left;*/
 	width: 150px;
-	height: 20px;
+	height: 25px;
+	display: block;
 	text-indent: -9999px;
 	background: url(../images/logo_bbva.png) no-repeat;
+}
+h2#contest_logo {
+	overflow: auto;
+}
+h2#contest_logo a {
+	float: left;
+	background-image: url(../images/logo_concurso.png);
+	height: 100px;
+	text-indent: -9999px;
+	width: 150px;
+}
+
+.ingredients h3 {
+	display: block;
+	height: 30px;
+	background: url(../images/ingredientes.png) no-repeat;
+	padding-left: 35px;
+	padding-top: 5px;
+}
+
+.how_to h3 {
+	display: block;
+	height: 30px;
+	background: url(../images/preparacion.png) no-repeat;
+	padding-left: 35px;
+	padding-top: 5px;
+}
+
+.content_list p {
+	margin-top: 0px;
+	font: 12px/1.6em Arial, Helvetica, Geneva, sans-serif;
+}
+
+p.description {
+	color: #808080;
+}
+
+#messages_list h3 {
+	margin-top: 0px;	
+	margin-bottom: 25px;
+	font-size: 35px;
+	line-height: 1em;
+}
+
+h3.color_0 {
+	color: #d4a963;
+}
+
+h3.color_1 {
+	color: #d46f69;
+}
+
+h3.color_2 {
+	color: #983826;
+}
+
+h3.color_3 {
+	color: #763a5e;
+}
+
+h3.color_4 {
+	color: #6c7644;
+}
+
+h3.color_5 {
+	color: #d66e35;
+}
+
+h3.color_6 {
+	color: #8a3d28;
+}
+
+h3.color_7 {
+	color: #ba585f;
+}
+
+h3.color_8 {
+	color: #aa2828;
+}
+
+h3.color_9 {
+	color: #d1833b;
+}
+
+h3.color_10 {
+	color: #c8642f;
 }
 
 
@@ -518,8 +615,12 @@ ul#most_voted {
 }
 
 #messages_list {
-	margin-top: 20px;
+	margin-top: 5px;
 	padding-right: 0px;
+}
+
+.section_header h4.right {
+	margin-bottom: 13px;
 }
 
 
@@ -677,6 +778,19 @@ a.media {
 
 div.how_to {
 	float: left;
-	width: 380px;	
+	width: 360px;	
 }
 
+.ingredients p,
+.how_to p {
+	margin-left: 30px;
+	font: 18px/1.6em Georgia, "Times New Roman", Times, serif;
+}
+
+div.section_header {
+	margin-top: 15px;
+}
+
+.how_to p {
+	margin-left: 35px;
+}

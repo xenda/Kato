@@ -8,17 +8,19 @@
   %body
     #header
       #logo
-        %h1#bbva BBVA Continental
-        %h2#contest_logo Concurso Más bueno que el Pan
+        %h1#bbva
+          = link_to "BBVA Continental", "http://bbvacontinental.com.pe"
+        %h2#contest_logo
+          = link_to "Concurso Más bueno que el Pan", root_path
       %ul
         %li= link_to "Sube tu receta", add_messages_path
-        %li Me gusta :3
+        %li Me gusta
     .wrapper
       %p.notice= notice
       %p.alert= alert
       .main
         .content_list
-          %p
+          %p.description
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco.
