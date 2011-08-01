@@ -561,15 +561,15 @@ $(function(){
 // }
 
 $('li.message').each(function(index,item){
-  $(item).append('<div class="tooltip" id="tooltip-' + $(item).attr('title').toLowerCase() + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
+  $(item).append('<div class="tooltip" id="tooltip-' + $(item).attr('title').toLowerCase().replace(" ", "_") + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
 });
 
 $('li.message').mouseover(function(){
-  var id = '#tooltip-' + $(this).attr('title').toLowerCase();
+  var id = '#tooltip-' + $(this).attr('title').toLowerCase().replace(" ", "_");
   $(id).fadeIn('fast');
 });
 $('li.message').mouseout(function(){
-  var id = '#tooltip-' + $(this).attr('title').toLowerCase();
+  var id = '#tooltip-' + $(this).attr('title').toLowerCase().replace(" ", "_");
   $(id).fadeOut('fast');
 });
 

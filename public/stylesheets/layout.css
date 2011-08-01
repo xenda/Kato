@@ -906,6 +906,7 @@ div.photo_zone a {
 }
 
 .tooltip {
+  display:none;
 	position: absolute;
 	width: auto;
 	height: auto;
