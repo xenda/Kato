@@ -1,3 +1,4 @@
+Cufon.replace('h1,h2,h3'); // Works without a selector engine
 
 $(function(){
 
