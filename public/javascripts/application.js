@@ -24,6 +24,12 @@ $('li.message').each(function(index,item){
   $(item).append('<div class="tooltip" id="tooltip_' + $(item).attr('id') + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
 });
 
+$('li.message .tooltip').each(function(index, item){
+  var top = (173-$(item).height())/2;
+  var left = (155-$(item).width())/2;
+  $(item).css({'top':top+'px', 'left': left+'px'});
+});
+
 $('li.message').mouseenter(function(){
 //  var id = '#tooltip_' + $(this).attr('id');
     $(this).find('.tooltip').fadeIn('fast');
