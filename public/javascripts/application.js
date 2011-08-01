@@ -28,7 +28,8 @@ $('li.message').mouseover(function(){
   var id = '#tooltip_' + $(this).attr('id');
   if($(id).css('display')=='none')
     $(id).fadeIn('fast');
-}).mouseout(function(){
+});
+$('li.message').mouseout(function(){
   var id = '#tooltip_' + $(this).attr('id');
   if($(id).css('display')=='block')
     $(id).fadeOut('fast');
