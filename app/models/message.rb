@@ -23,4 +23,12 @@ class Message < ActiveRecord::Base
     false
   end
 
+  def photo_url
+    if photo_file_name
+      photo.url(:big)
+    else
+      "http://alpha-kato.heroku.com/images/default.jpg"
+    end
+  end
+
 end
