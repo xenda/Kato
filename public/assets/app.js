@@ -567,10 +567,7 @@ $('li.message').each(function(index,item){
 $('li.message .tooltip').each(function(index, item){
   var top = (173-$(item).height())/2;
   var left = (155-$(item).width())/2;
-  console.log(top);
-  console.log(left);
   $(item).css({'top':top+'px', 'left': left+'px'});
-  console.log($(item));
 });
 
 $('li.message').mouseenter(function(){
