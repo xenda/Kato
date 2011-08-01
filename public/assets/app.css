@@ -250,6 +250,16 @@ h3 {
 	color: #0247a4;
 }
 
+div.terms {
+	width: 470px;
+	margin-top: 30px;
+}
+
+div.terms li {
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+	font-size: 12px;
+}
+
 h2 {
   
   font-size: 20px;
@@ -624,18 +634,18 @@ textarea#message_content.text.optional {
     form fieldset > ol > li.error input[type=text], form fieldset > ol > li.error input[type=password], form fieldset > ol > li.error input[type=email], form fieldset > ol > li.error input[type=url], form fieldset > ol > li.error input[type=tel], form fieldset > ol > li.error textarea {
       border: 1px solid #cc0000; }
   form input[type=submit],a.button {
-    box-shadow: 0 1px 2px #aaaaaa;
+    /*box-shadow: 0 1px 2px #aaaaaa;
     -moz-box-shadow: 0 1px 2px #aaaaaa;
-    -webkit-box-shadow: 0 1px 2px #aaaaaa;
+    -webkit-box-shadow: 0 1px 2px #aaaaaa;*/
     background: #1a3559; 
     /*background: #3469a8;*/
     background: -webkit-gradient(linear, left top, left bottom, from(#3469a8), to(#1a3559));
     background: -moz-linear-gradient(-90deg, #1a3559, #3469a8);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1a3559, endColorstr=#3469a8);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1a3559, endColorstr=#3469a8);
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     text-shadow: black 0 1px 0;
     text-decoration: none;
     margin-right: 3px;
@@ -652,13 +662,19 @@ textarea#message_content.text.optional {
 #most_voted .message div.meta_data div.votes div.vote_count {
 	float: left;
 	margin-right: 10px;	
-	padding: 4px 8px;
-	font-size: 11px;
-	background-color: #fffeff;
-	color: #24628f;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 5px;
-	border-radius: 0px
+	padding: 2px 8px;
+	font-size: 10px;
+	background-color: #555;
+	color: #e4e8e8;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px
+	-webkit-box-shadow: inset 1px 1px 1px #000;
+	-moz-box-shadow: inset 1px 1px 1px #00000;
+	box-shadow: inset 0px 1px 1px 0px #000;
+	margin-top: 0px !important;
+	margin-right: 0px;
+
 }
 
 #messages_list .message div.meta_data div.votes div.submit,
@@ -669,9 +685,9 @@ textarea#message_content.text.optional {
 
     form input[type=submit]:hover {
       color: #fff;
-      box-shadow: 0 1px 3px #888888;
+      /*box-shadow: 0 1px 3px #888888;
       -moz-box-shadow: 0 1px 3px #888888;
-      -webkit-box-shadow: 0 1px 3px #888888; }
+      -webkit-box-shadow: 0 1px 3px #888888;*/ }
       form input[type=submit]:hover span.icon svg path, form input[type=submit]:hover span.icon svg polygon, form input[type=submit]:hover span.icon svg rect, form input[type=submit]:hover span.icon svg circle {
         fill: white !important; }
     form input[type=submit]:active,
@@ -696,9 +712,9 @@ textarea#message_content.text.optional {
         background: -moz-linear-gradient(-90deg, #838a90, #414549);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#838a90, endColorstr=#414549);
         -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#838a90, endColorstr=#414549);
-        -webkit-border-radius: 200px;
+        -webkit-border-radius: 100px;
         -moz-border-radius: 200px;
-        border-radius: 200px;
+        border-radius: 100px;
         text-shadow: black 0 1px 0;
         text-decoration: none;
         margin-right: 3px;
@@ -781,10 +797,12 @@ div.message {
   -moz-box-shadow: 0px 0px 8px 1px #c1c1c1;
   box-shadow: 0px 0px 8px 1px #c1c1c1;
 	/*background-color: #ccd6e3;*/
-	background-color: #eef6fb;
+	/*background-color: #eef6fb;*/
+	
 	list-style-type: none;
 	margin-bottom: 20px;
 	overflow: hidden;
+	background-color: #323333;
 }
 
 #footer a.button {
@@ -810,6 +828,11 @@ div.share_zone {
 div.share_zone a {
 	color: white;
 	text-decoration: none;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+div.share_zone a:hover {
+	background-color: transparent
 }
 
 a.facebook_icon {
@@ -850,7 +873,6 @@ div.photo_zone {
 	height: 110px;
 	overflow: hidden;
 }
-
 div.meta_data {
 	padding: 5px 10px;
 	overflow: auto;
@@ -865,16 +887,16 @@ a.button {
     background: -moz-linear-gradient(-90deg, #5c7ca6, #3469a8);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
-	margin-top: 2px;
+	margin-right: 0px;
 }
 
 a.button {
 
 	display: block;
 	width: 60px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
 	text-align: center;
 	color: white;
 	text-decoration: none;
@@ -919,8 +941,9 @@ a.media {
 
 .inner div.photo_zone a {
 	overflow: hidden;
-	height: auto;
 	display: block;
+	height: auto !important;
+	background-color: black;
 }
 
 
@@ -953,6 +976,10 @@ div.content ul li {
 	color: #666;
 }
 
+div.photo_zone a {
+	height: 110px;
+	display: block;
+}
 
 .tooltip {
 	position: absolute;
@@ -968,5 +995,5 @@ div.content ul li {
 	-webkit-border-radius:5px;
   box-shadow:2px 2px 3px #000;
   -moz-box-shadow:2px 2px 3px #000;
-  -webkit-box-shadow:2px 2px 3px 	
+  -webkit-box-shadow:2px 2px 3px;
 }
