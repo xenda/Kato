@@ -566,10 +566,12 @@ $('li.message').each(function(index,item){
 
 $('li.message').mouseover(function(){
   var id = '#tooltip_' + $(this).attr('id');
-  $(id).fadeIn('fast');
+  if($(id).css('display')=='none')
+    $(id).fadeIn('fast');
 }).mouseout(function(){
   var id = '#tooltip_' + $(this).attr('id');
-  $(id).fadeOut('fast');
+  if($(id).css('display')=='block')
+    $(id).fadeOut('fast');
 });
 
 //$("li.message").tipsy({gravity: 's', fade:true});

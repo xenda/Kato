@@ -912,13 +912,14 @@ div.photo_zone a {
 	width: 155px;
 	height: auto;
 	padding: 5px;
-	color:white;
 	z-index: 50;
 }
 
 .tooltip .content{
   margin:0 auto;
+  width:90px;
 	background: black !important;
+	color:white;
 	text-align: center;
 	border-radius:5px;
 	-moz-border-radius:5px;
