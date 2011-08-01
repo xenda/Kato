@@ -2,7 +2,11 @@ a img{
   border: none;
 }
 
-#messages_list, .meta_data{
+h2#contest_logo a, div#logo h1 a{
+  behavior: url(/stylesheets/iepngfix.htc);
+}
+
+#messages_list, div.meta_data, div.share_zone{
   overflow: hidden !important;
 }
 .meta_data{
