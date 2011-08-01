@@ -62,12 +62,13 @@ function updateVotesCount(data){
   $("#message_" + data['message_id']).effect("shake", { distance: 3, times: 5}, 100).effect("highlight", {}, 1000);
 }
 
-function streamPublish(name, caption, link, description){
+function streamPublish(name, caption, link, description,picture){
     FB.ui({ method : 'feed',
             name: name,
             caption: caption,
             link   :  link,
-            description: description
+            description: description,
+            picture: picture
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
