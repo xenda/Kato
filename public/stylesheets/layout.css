@@ -5,7 +5,6 @@
 */
 
 body {
-	background-color: #000000;
 	/*background-image: -webkit-gradient(
     linear,
     left bottom,
@@ -20,10 +19,14 @@ background-image: -moz-linear-gradient(
 );*/
 
 	margin: 0px;
+	background: #000000 url(../images/back_whole.jpg) no-repeat -19px 492px;
+	padding: 0px;
+}
+
+.page {
 	padding: 10px;
-	/*font-family: Georgia, "Times New Roman", Times, serif;*/
-	/*width: 760px;
-	background: red;*/
+		background:  url(../images/back_canasta.jpg) no-repeat 140px -339px;
+
 }
 
 /*html {
