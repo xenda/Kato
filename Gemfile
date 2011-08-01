@@ -47,3 +47,4 @@ gem "fb_graph"
 gem 'rails-footnotes', '>= 3.7', :group => :development
 gem 'pusher'
 gem 'paperclip'
+gem 'aws-s3'

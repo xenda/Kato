@@ -72,6 +72,10 @@ GEM
     addressable (2.2.6)
     arel (2.0.10)
     attr_required (0.0.3)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     cocaine (0.1.0)
@@ -192,6 +196,7 @@ GEM
     warden (1.0.4)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
+    xml-simple (1.0.14)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 
@@ -200,6 +205,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  aws-s3
   devise
   devise_oauth2_canvas_facebook
   fb_graph
