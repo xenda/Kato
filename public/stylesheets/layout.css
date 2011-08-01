@@ -22,6 +22,16 @@ background-image: -moz-linear-gradient(
 	margin: 0px;
 	padding: 10px;
 	/*font-family: Georgia, "Times New Roman", Times, serif;*/
+	/*width: 760px;
+	background: red;*/
+}
+
+/*html {
+	background: yellow;
+}*/
+
+a img{
+  border: none;
 }
 
 .sidebar h3 {
@@ -32,9 +42,9 @@ background-image: -moz-linear-gradient(
 
 div.content_list {
 	float: left;
-	width: 580px;
-	padding-right: 10px;
-	margin-right: 10px;
+	width: 530px;
+	padding-right: 6px;
+	margin-right: 13px;
 	border-right: 1px solid #e8e8e8;
 }
 
@@ -76,7 +86,8 @@ div.inner div.tipsy {
 }
 div.sidebar {
 	float: left;
-	width: 200px;
+	width: 180px;
+	padding-top: 10px;
 }
 div.input {
 	width: 700px;
@@ -100,12 +111,12 @@ box-shadow: 0px 0px 10px 0px #11162e;
 	padding: 10px;
 	padding-left: 20px;
 	clear: both;
-	width: 810px;
+	width: 730px;
 }
 
 #header ul {
 	float: left;
-	margin-left: 430px;
+	margin-left: 330px;
 }
 
 #header ul li {
@@ -115,10 +126,11 @@ box-shadow: 0px 0px 10px 0px #11162e;
 	list-style: none;
 	/*background-color: #fffeff;*/
 	padding: 5px 8px;
+	text-align: right;
 	/*-webkit-box-shadow: 0px 0px 10px 0px #11162e;
 -moz-box-shadow: 0px 0px 10px 0px #11162e;
 box-shadow: 0px 0px 10px 0px #11162e;*/
-
+	
 
 
 }
@@ -174,7 +186,7 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 	/*height: 84px;
 	width: 501px;*/
 	/*text-indent: -9999px;*/
-	margin-bottom: 10px;
+	/*margin-bottom: 10px;*/
 	float: left;
 }
 div#logo h1 {
@@ -197,6 +209,7 @@ div#logo h1 a {
 }
 h2#contest_logo {
 	overflow: auto;
+	margin-bottom: 0px;
 }
 h2#contest_logo a {
 	float: left;
@@ -230,7 +243,9 @@ h2#contest_logo a {
 p.description {
 	color: #808080;
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
+
 
 #messages_list h3 {
 	margin-top: 0px;	
@@ -650,7 +665,8 @@ ul#most_voted {
 }
 
 ul#most_voted {
-	width: ;	
+	padding: 0px;
+	padding-left: 4px;
 }
 
 #messages_list {
@@ -670,6 +686,7 @@ div.message {
 	float: left;
 	margin-right: 10px;
 	width: 180px;
+	width: 165px;
 	-webkit-box-shadow: 0px 0px 8px 1px #c1c1c1;
 	/*#ccd6e3*/
   -moz-box-shadow: 0px 0px 8px 1px #c1c1c1;
@@ -741,7 +758,7 @@ div.icons a:hover {
 
 div.photo_zone {
 	text-align: center;
-	height: 150px;
+	height: 120px;
 	overflow: hidden;
 }
 
@@ -833,4 +850,12 @@ div.section_header {
 
 .how_to p {
 	margin-left: 35px;
+}
+
+div.content ul {
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+div.content ul li {
+	margin-bottom: 10px;
+	color: #666;
 }
