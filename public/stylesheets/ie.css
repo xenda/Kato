@@ -1,0 +1,7 @@
+a img{
+  border: none;
+}
+
+#messages_list{
+  overflow: hidden;
+}
