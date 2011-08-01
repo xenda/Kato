@@ -152,7 +152,7 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 	box-shadow: none;
 }
 #header ul li.like {
-	margin-top: 4px;
+	margin-top: 0px;
 }
 label.optional {
 	display: block;
@@ -574,7 +574,7 @@ textarea#message_content.text.optional {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    text-shadow: #456fa6 1px 22px 0;
+    text-shadow: #456fa6 1px 2px 5px;
     text-decoration: none;
     margin-right: 3px;
     font-weight: normal;
@@ -736,7 +736,7 @@ div.message {
 }
 
 #footer a.button {
-	width: 200px;
+	width: 240px;
 }
 
 div.main {
