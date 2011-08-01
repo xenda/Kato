@@ -25,11 +25,11 @@ $('li.message').each(function(index,item){
 });
 
 $('li.message').mouseenter(function(){
-  var id = '#tooltip_' + $(this).attr('id');
-    $(id).fadeIn('fast');
+//  var id = '#tooltip_' + $(this).attr('id');
+    $(this).find('.tooltip').fadeIn('fast');
 }).mouseleave(function(){
-  var id = '#tooltip_' + $(this).attr('id');
-    $(id).fadeOut('fast');
+//  var id = '#tooltip_' + $(this).attr('id');
+    $(this).find('.tooltip').fadeOut('fast');
 });
 
 //$("li.message").tipsy({gravity: 's', fade:true});

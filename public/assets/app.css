@@ -997,7 +997,8 @@ div.photo_zone a {
 
 .tooltip .content{
   margin:50% auto;
-  width:90px;
+  width:100px;
+  max-width: 150px;
 	background: black !important;
 	color:white;
 	text-align: center;
@@ -1005,8 +1006,10 @@ div.photo_zone a {
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
-  box-shadow:2px 2px 3px #000;
-  -moz-box-shadow:2px 2px 3px #000;
-  -webkit-box-shadow:2px 2px 3px;
-  opacity:0.7;
+  -webkit-box-shadow: 0px 0px 8px 1px #000;
+  -moz-box-shadow: 0px 0px 8px 1px #000;
+  box-shadow: 0px 0px 8px 1px #000;
+  font-size: 11px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
