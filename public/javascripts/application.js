@@ -10,15 +10,15 @@ $(function(){
   //   });
   // });
 
-window.fbAsyncInit = function() {
-  FB.Canvas.setSize();
-}
+// window.fbAsyncInit = function() {
+//   FB.Canvas.setSize();
+// }
 
-// Do things that will sometimes call sizeChangeCallback()
+// // Do things that will sometimes call sizeChangeCallback()
 
-function sizeChangeCallback() {
-  FB.Canvas.setSize();
-}
+// function sizeChangeCallback() {
+//   FB.Canvas.setSize();
+// }
 
 
 $("li.message").tipsy({gravity: 's', fade:true});
