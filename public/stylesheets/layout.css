@@ -130,7 +130,7 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 	box-shadow: none;
 }
 
-label.string.optional {
+label.optional {
 	display: block;
 	font-family: Arial, Helvetica, Geneva, sans-serif;
 	margin-bottom: 5px;
@@ -420,12 +420,17 @@ form {
       form fieldset > ol > li fieldset ol li {
         padding: 0;
         border: 0; }
-  form input[type=text], form input[type=password], form input[type=email], form input[type=url], form input[type=tel], form textarea {
+  form input[type=text],
+    form input[type=file], form input[type=password], form input[type=email], form input[type=url], form input[type=tel], form textarea {
     width: 76%;
     border: 1px solid #c9d0d6;
     font-size: 0.95em;
     outline: none;
     padding: 8px 10px;margin-bottom: 10px; }
+
+textarea#message_ingredients.text.optional {
+	height: 120px;
+}
 
 .content_list h1 {
 	margin-bottom: 20px;
@@ -450,7 +455,7 @@ div.flash {
 
 input#message_title.string.required {
 	font-size: 16px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 textarea#message_content.text.optional {
