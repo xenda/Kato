@@ -94,7 +94,8 @@ div.sidebar {
 	padding-top: 10px;
 }
 div.input {
-	width: 700px;
+	width: 500px;
+	padding-left: 5px;
 }
 
 div.input.select.required {
