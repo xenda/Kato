@@ -561,7 +561,7 @@ $(function(){
 // }
 
 $('li.message').each(function(index,item){
-  $(item).append('<div class="tooltip" id="tooltip-' + $(item).attr('title').toLowerCase() + '" style="display:none;"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
+  $(item).append('<div class="tooltip" id="tooltip-' + $(item).attr('title').toLowerCase() + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
 });
 
 $('li.message').mouseover(function(){
