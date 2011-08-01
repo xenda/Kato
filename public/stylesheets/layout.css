@@ -401,7 +401,8 @@ form {
         box-shadow: 0 1px 2px #aaaaaa;
         -moz-box-shadow: 0 1px 2px #aaaaaa;
         -webkit-box-shadow: 0 1px 2px #aaaaaa;
-        text-shadow: white 0 1px 0;
+        text-shadow: white 0 1px #        456fa6;
+
         border-bottom: 1px solid #ededed;
         padding: 5px 10px 3px 10px;
         font-size: 1.0em;
@@ -573,7 +574,7 @@ textarea#message_content.text.optional {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    text-shadow: black 0 1px 0;
+    text-shadow: #456fa6 1px 22px 0;
     text-decoration: none;
     margin-right: 3px;
     font-weight: normal;
@@ -765,7 +766,22 @@ div.share_zone a:hover {
 }
 
 a.facebook_icon {
-	background-image: url(../images/facebook-icon.gif);
+	background-image: url(../images/facebook-icon.png);
+	height: 16px;
+	width: 16px;
+	text-indent: -9999px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+}
+
+a.facebook_icon:hover {
+	background-image: url(../images/facebook-icon-over.png);
+	
+}
+
+a.twitter_icon {
+	background-image: url(../images/twitter-icon.png);
 	height: 16px;
 	width: 16px;
 	text-indent: -9999px;
@@ -773,13 +789,9 @@ a.facebook_icon {
 	float: left;
 }
 
-a.twitter_icon {
-	background-image: url(../images/twitter-icon.gif);
-	height: 16px;
-	width: 16px;
-	text-indent: -9999px;
-	display: block;
-	float: left;
+a.twitter_icon:hover {
+	background-image: url(../images/twitter-icon-over.png);
+	
 }
 
 
@@ -823,7 +835,12 @@ a.button {
       -webkit-box-shadow: inset 1 1px 1px #7591b5;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;      
-      border-radius: 3px
+      border-radius: 3px;
+      font-weight: bold;
+	  font-size: 10px;
+	color: white;
+	margin-top: 1px;
+
 }
 
 a.button {
