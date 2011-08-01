@@ -914,16 +914,18 @@ div.photo_zone a {
 	position: absolute;
 	width: 155px;
 	height: auto;
-	padding: 5px;
 	z-index: 50;
+  top:0;
+  left:0;
 }
 
 .tooltip .content{
-  margin:0 auto;
+  margin:50% auto;
   width:90px;
 	background: black !important;
 	color:white;
 	text-align: center;
+	padding: 5px;
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
