@@ -8,3 +8,14 @@ a img{
 .meta_data{
   padding-left:5px;
 }
+
+.wrapper{
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#11162e', Direction=145, Strength=10);
+}
+a.button{
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=145, Strength=2);
+}
+#messages_list li, ul#most_voted li, div.message{
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#c1c1c1', Direction=145, Strength=8);
+}
+#messages_list .message div.meta_data div.votes div.vote_count, #most_voted .message div.meta_data div.votes div.vote_count{}
