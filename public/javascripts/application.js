@@ -22,11 +22,15 @@ $(function(){
 
 $('li.message').each(function(index,item){
   $(item).append('<div class="tooltip" id="tooltip_' + $(item).attr('id') + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
-  var top = ($(item).height()-$('tooltip_' + $(item).attr('id')).height())/2;
-  var left = ($(item).width()-$('tooltip_' + $(item).attr('id')).width())/2;
+});
+
+$('li.message .tooltip').each(function(index, item){
+  var top = (173-$(item).height())/2;
+  var left = (155-$(item).width())/2;
   console.log(top);
   console.log(left);
-  $('tooltip_' + $(item).attr('id')).css({'top':top+'px', 'left': left+'px'});
+  $(item).css({'top':top+'px', 'left': left+'px'});
+  console.log($(item));
 });
 
 $('li.message').mouseenter(function(){
