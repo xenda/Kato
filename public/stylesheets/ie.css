@@ -2,6 +2,6 @@ a img{
   border: none;
 }
 
-#messages_list{
+#messages_list, .meta_data{
   overflow: hidden;
 }
