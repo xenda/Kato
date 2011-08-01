@@ -566,12 +566,10 @@ $('li.message').each(function(index,item){
 
 $('li.message').mouseover(function(){
   var id = '#tooltip_' + $(this).attr('id');
-  if($(id).css('display')=='none')
-    $(id).fadeIn('fast');
+    $(id).css({opacity:0.7, display:"none"}).fadeIn('fast');
 }).mousemove(function(){
   var id = '#tooltip_' + $(this).attr('id');
-  if($(id).css('display')=='none')
-    $(id).fadeIn('fast');
+    $(id).show();
 }).mouseout(function(){
   var id = '#tooltip_' + $(this).attr('id');
   if($(id).css('display')=='block')
