@@ -1,0 +1,14 @@
+development:
+  bucket: alpha-kato.heroku.com
+  access_key_id: 1B7JJ1RZXMZP7VQADY02
+  secret_access_key: 8UvZq1RtsyE72t0vq2U1FaaZStGXm9fj87uFub2b
+
+test:
+  bucket: alpha-kato.heroku.com
+  access_key_id: 1B7JJ1RZXMZP7VQADY02
+  secret_access_key: 8UvZq1RtsyE72t0vq2U1FaaZStGXm9fj87uFub2b
+
+production:
+  bucket: alpha-kato.heroku.com
+  access_key_id: 1B7JJ1RZXMZP7VQADY02
+  secret_access_key: 8UvZq1RtsyE72t0vq2U1FaaZStGXm9fj87uFub2b
