@@ -729,6 +729,7 @@ div.message {
 	margin-bottom: 20px;
 	overflow: hidden;
 	background-color: #323333;
+  position: relative;
 }
 
 #footer a.button {
@@ -905,4 +906,25 @@ div.content ul li {
 div.photo_zone a {
 	height: 110px;
 	display: block;
+}
+
+.tooltip {
+  display:none;
+	position: absolute;
+	width: auto;
+	height: auto;
+	background: black !important;
+	text-align: center;
+	padding: 5px 15px;
+	color:white;
+	z-index: 50;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+  box-shadow:2px 2px 3px #000;
+  -moz-box-shadow:2px 2px 3px #000;
+  -webkit-box-shadow:2px 2px 3px;
+  top:80px;
+  left:40px;
+  opacity:0.7;
 }
