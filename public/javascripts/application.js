@@ -22,6 +22,9 @@ $(function(){
 
 $('li.message').each(function(index,item){
   $(item).append('<div class="tooltip" id="tooltip_' + $(item).attr('id') + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
+  var top = ($(item).height()-$('tooltip_' + $(item).attr('id')).height())/2;
+  var left = ($(item).width()-$('tooltip_' + $(item).attr('id')).width())/2;
+  $('tooltip_' + $(item).attr('id')).css({'top':top, 'left': left});
 });
 
 $('li.message').mouseenter(function(){
