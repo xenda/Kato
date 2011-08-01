@@ -560,8 +560,20 @@ $(function(){
 //   FB.Canvas.setSize();
 // }
 
+$('li.message').each(function(index,item){
+  $(item).append('<div class="tooltip" id="tooltip-' + $(item).attr('title').toLowerCase() + '" style="display:none;"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
+});
 
-$("li.message").tipsy({gravity: 's', fade:true});
+$('li.message').mouseover(function(){
+  var id = '#tooltip-' + $(this).attr('title').toLowerCase();
+  $(id).fadeIn('fast');
+});
+$('li.message').mouseout(function(){
+  var id = '#tooltip-' + $(this).attr('title').toLowerCase();
+  $(id).fadeOut('fast');
+});
+
+//$("li.message").tipsy({gravity: 's', fade:true});
 
   // Enable pusher logging - don't include this in production
   Pusher.log = function(message) {
