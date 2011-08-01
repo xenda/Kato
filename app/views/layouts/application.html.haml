@@ -38,14 +38,30 @@
             = link_to "Ver todos", messages_path, :class=> "button"
       #footer
         = link_to "Términos y condiciones del concurso", terms_path, :class => "button"
-    #fb-root
     %script{:src => "http://connect.facebook.net/en_US/all.js"}
     :javascript
-      FB.init({
-      appId : '136578643087393',
-      status : true, // check login status
-      cookie : true, // enable cookies to allow the server to access the session
-      xfbml : true // parse XFBML
-      });
+
+      window.fbAsyncInit = function() {
+
+        FB.init({
+        appId : '136578643087393',
+        status : true, // check login status
+        cookie : true, // enable cookies to allow the server to access the session
+        xfbml : true // parse XFBML
+        });
+
+        window.setTimeout(function() {
+          FB.Canvas.setAutoResize();
+        }, 250);
+      };
+
+      (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+          '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+      }());
+
+
     = include_javascripts :app
     %script{:src => "http://js.pusherapp.com/1.8/pusher.min.js", :type => "text/javascript"}

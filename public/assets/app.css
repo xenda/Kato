@@ -112,7 +112,7 @@ a img{
 
 .sidebar h3 {
 	margin-top: 0px;	
-	font-family: 'Gloria Hallelujah', cursive;
+	/*font-family: 'Gloria Hallelujah', cursive;*/
 
 }
 
@@ -126,13 +126,14 @@ div.content_list {
 
 div.message_content {
 	overflow: auto;	
-	padding-left: 20px;
+	/*padding-left: 20px;*/
+	margin-bottom: 20px;
 }
 
 div.ingredients {
 	float: left;
 	margin-right: 20px;
-	width: 180px;
+	width: 165px;
 }
 
 .inner div.photo_zone a img {
@@ -191,8 +192,14 @@ box-shadow: 0px 0px 10px 0px #11162e;
 }
 
 #header ul {
-	float: left;
-	margin-left: 330px;
+	float: right;
+}
+
+div.video video,
+div.video object,
+div.video embed,
+div.video iframe {
+	width: 500px;
 }
 
 #header ul li {
@@ -229,15 +236,16 @@ label.optional {
 }
 
 
-h1, h2 { font-family: 'Gloria Hallelujah', cursive;
+h1, h2 { 
+/*font-family: 'Gloria Hallelujah', cursive;*/
 margin: 0px; margin-bottom: 10px;
 font-size: 26px;
 	color: #0352a7;
 }
 
 h3 {
-	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 20px;
+	/*font-family: 'Gloria Hallelujah', cursive;*/
+	font-size: 18px;
 	margin-bottom: 0px;
 	color: #0247a4;
 }
@@ -303,6 +311,7 @@ h2#contest_logo a {
 	background: url(../images/ingredientes.png?1312213737) no-repeat;
 	padding-left: 35px;
 	padding-top: 5px;
+	margin-top: 0px	
 }
 
 .how_to h3 {
@@ -311,6 +320,7 @@ h2#contest_logo a {
 	background: url(../images/preparacion.png?1312213737) no-repeat;
 	padding-left: 35px;
 	padding-top: 5px;
+	margin-top: 0px;
 }
 
 .content_list p {
@@ -744,7 +754,8 @@ ul#most_voted {
 
 ul#most_voted {
 	padding: 0px;
-	padding-left: 4px;
+	padding-left: 5px;
+	padding-top: 6px;
 }
 
 #messages_list {
@@ -898,7 +909,9 @@ a.media {
 
 .inner #messages_list {
 	margin-top: 10px;
-	padding: 10px;
+	padding: 10px 4px;
+	padding-bottom: 0px;
+	width: 490px;
 }
 .inner #messages_list .message {
 	width: 100%;
@@ -913,13 +926,15 @@ a.media {
 
 div.how_to {
 	float: left;
-	width: 360px;	
+	width: 305px;	
 }
 
 .ingredients p,
 .how_to p {
-	margin-left: 30px;
-	font: 18px/1.6em Georgia, "Times New Roman", Times, serif;
+	margin-left: 35px;
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #727272;
 }
 
 div.section_header {
@@ -927,7 +942,7 @@ div.section_header {
 }
 
 .how_to p {
-	margin-left: 35px;
+	margin-left: 39px;
 }
 
 div.content ul {
