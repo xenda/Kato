@@ -2,6 +2,10 @@ a img{
   border: none;
 }
 
+h2#contest_logo a, div#logo h1 a{
+  behavior: url(/stylesheets/iepngfix.htc);
+}
+
 #messages_list, .meta_data{
   overflow: hidden !important;
 }
