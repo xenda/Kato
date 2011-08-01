@@ -5,8 +5,10 @@ javascripts:
     - public/javascripts/jquery_ujs.js
     - public/javascripts/jquery_ui.custom.min.js
     - public/javascripts/jquery.oembed.min.js
+    - public/javascripts/jquery.tipsy.js
     - public/javascripts/application.js
 stylesheets:
   app:
     - public/stylesheets/scaffold.css
+    - public/stylesheets/tipsy.css
     - public/stylesheets/layout.css

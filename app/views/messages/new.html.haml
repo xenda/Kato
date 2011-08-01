@@ -1,5 +1,10 @@
-%h1 New message
+%h1 Participa y envíanos tu receta
 
-= render 'form'
+= simple_form_for @message, :html =>{:multipart => true} do |f|
+  = f.input :title, :label => false
+  = f.input :ingredients, :label => "Ingredientes"
+  = f.input :photo, :label => "Sube la mejor foto de tu receta"
+  = f.input :content, :label => false
 
-= link_to 'Back', messages_path
+  = f.input :user_id, :as => :hidden, :value => current_user.id if current_user
+  = f.submit 'Enviar receta'

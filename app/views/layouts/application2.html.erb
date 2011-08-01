@@ -2,21 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <title>Kato</title>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&v1' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
   <%= include_stylesheets :app %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-  
-  <div id="logo">
-    BBVA Continental - 3er Concurso PeruGourmet
+
+  <div id="header">
+    <div id="logo">
+      BBVA Continental - 3er Concurso PeruGourmet
+      <h2 id="contest_logo">Concurso Más bueno que el Pan</h2>
+    </div>
+    <ul>
+      <li><%= link_to "Sube tu receta", add_messages_path %></li>
+      <li>Me gusta :3</li>
+    </ul>
   </div>
 
-  
+
   <div class="wrapper">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>    
+    <%= yield %>
 
   </div>
   <div id="fb-root"></div>
@@ -29,7 +36,7 @@
   xfbml : true // parse XFBML
   });
   </script>
-  <%= include_javascripts :app %> 
-  <script src="http://js.pusherapp.com/1.8/pusher.min.js" type="text/javascript"></script>    
+  <%= include_javascripts :app %>
+  <script src="http://js.pusherapp.com/1.8/pusher.min.js" type="text/javascript"></script>
 </body>
 </html>

@@ -10,73 +10,37 @@ function sizeChangeCallback() {
 
 $(function(){
 
-  var $container = $('#messages_list');
-  $container.imagesLoaded(function(){
-    $container.masonry({
-      itemSelector : '.message',
-      isAnimated : true
-    });
+  // var $container = $('#messages_list');
+  // $container.imagesLoaded(function(){
+  //   $container.masonry({
+  //     itemSelector : '.message',
+  //     isAnimated : true
+  //   });
+  // });
+
+$("li.message").tipsy({gravity: 's', fade:true});
+
+  // Enable pusher logging - don't include this in production
+  Pusher.log = function(message) {
+    if (window.console && window.console.log) window.console.log(message);
+  };
+
+  // Flash fallback logging - don't include this in production
+  WEB_SOCKET_DEBUG = true;
+
+  var pusher = new Pusher('e5e83dab1c59e257be10');
+  var channel = pusher.subscribe('alpha-skunk');
+  channel.bind('message:create', function(data) {
+    addNewMessage(data);
+  });
+  channel.bind('vote:create', function(data) {
+    updateVotesCount(data);
   });
 
-
-  $(".message").each(function(value){ 
-
-  // Capture each comment text
-  text = $(this).html();
-
-    	// We match the URL pattern
-    	regMatches = (text.match(/\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.])(?:[^\s()<>]+|\([^\s()<>]+\))+(?:\([^\s()<>]+\)|[^`!()\[\]{};:'".,<>?«»“”‘’\s]))/gi));
-        if (regMatches) {
-    	// We iterate from each matches
-    	$.each(regMatches, function(index,value){
-        	reg_value = value.replace("?","\\?")
-        	var re = new RegExp("\\s*"+reg_value+"\\s*","gim");
-        	//console.debug(re);
-        	randId = Math.floor(Math.random()*1000);
-        	mediaId = "oembed_media_" + randId;
-        	text = text.replace(re,"<a href='"+ value +"' class='oembed hidden media' id='"+mediaId+"'>"+value+"</a>");
-    	})
-    	$(this).html(text);
-  	}
-  });
-
-  $(".oembed").oembed(null,
-    {
-      embedMethod:"append", maxWidth:"240",
-      afterEmbed: function(oembedData) {
-        $container.imagesLoaded(function(){
-          $container.masonry( 'reload' );})
-    }
-    });
-      // Enable pusher logging - don't include this in production
-      Pusher.log = function(message) {
-        if (window.console && window.console.log) window.console.log(message);
-      };
-
-      // Flash fallback logging - don't include this in production
-      WEB_SOCKET_DEBUG = true;
-
-      var pusher = new Pusher('e5e83dab1c59e257be10');
-      var channel = pusher.subscribe('alpha-kato');
-      channel.bind('message:create', function(data) {
-        addNewMessage(data);
-      });
-      channel.bind('vote:create', function(data) {
-        updateVotesCount(data);
-      });
-        
-
-
-
-      
-    
-    
-    
-    
 });
 
 function addNewMessage(data){
-  
+
   var token = $('meta[name="csrf-token"]').attr('content')
   // var data = [];
   // data['id']  = "lala";
@@ -90,16 +54,16 @@ function addNewMessage(data){
 }
 
 function updateVotesCount(data){
-  
+
   var token = $('meta[name="csrf-token"]').attr('content')
-  
+
   $('#message_' + data['message_id'] + ' .votes').html('<div class=\'vote_count\'>\n'+ data['votes_count'] +  '\nvotos\n<\/div>\n<div class=\'submit\'>\n<form accept-charset=\"UTF-8\" action=\"/votes\" class=\"simple_form vote\" data-remote=\"true\" id=\"new_vote\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"' + token +'\" /><\/div>\n<input class=\"hidden\" id=\"vote_message_id\" name=\"vote[message_id]\" type=\"hidden\" value=\"'+ data['message_id'] + '\" />\n<input class=\"button\" id=\"vote_submit\" name=\"commit\" type=\"submit\" value=\"Votar\" />\n<\/form>\n<\/div>\n');
- 
-  $("#message_" + data['message_id']).effect("shake", { distance: 3, times: 5}, 100).effect("highlight", {}, 1000);   
+
+  $("#message_" + data['message_id']).effect("shake", { distance: 3, times: 5}, 100).effect("highlight", {}, 1000);
 }
 
-function streamPublish(name, caption, link, description){        
-    FB.ui({ method : 'feed', 
+function streamPublish(name, caption, link, description){
+    FB.ui({ method : 'feed',
             name: name,
             caption: caption,
             link   :  link,

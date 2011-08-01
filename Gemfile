@@ -46,3 +46,4 @@ gem "inherited_resources"
 gem "fb_graph"
 gem 'rails-footnotes', '>= 3.7', :group => :development
 gem 'pusher'
+gem 'paperclip'

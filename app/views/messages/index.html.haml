@@ -1,19 +1,10 @@
-%h1 Participa y envíanos tu receta
-- if current_user && current_user.name
-  %h2
-    Hola 
-    = current_user.name
-    Envíanos tu receta para un Perú adelante
+.video
+  :erb
+    <iframe width="425" height="349" src="http://www.youtube.com/embed/r_WERPN8KO8"; frameborder="0" allowfullscreen></iframe>
 
-%ul#categories
-  - Category.all.each do |c|
-    %li= link_to c.name, "#"
-
-= simple_form_for @message do |f|
-  = f.input :title, :label => false
-  = f.input :content, :label => false
-  = f.association :category, :label => "Categoría"
-  = f.submit 'Enviar receta'
+.section_header
+  %h3.left Las últimas recetas
+  %h4.right Vota por tus recetas favoritas
 
 %ul#messages_list
   = render @messages

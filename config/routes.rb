@@ -7,17 +7,23 @@ Kato::Application.routes.draw do
 
   resources :categories
 
-  resources :messages
+  resources :messages do
+    collection do
+      get 'add'
+      post 'verify'
+    end
+  end
 
   devise_for :users do
     post 'users/fb_auth(.:format)' => "devise/facebook_consumer#auth"
-    post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"            
+    post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"
   end
-  
+
   resource :users do
     post 'users/fb_auth(.:format)' => "devise/facebook_consumer#auth"
-    post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"        
+    post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"
   end
+  match "/terms" => "home#terms", :as => "terms"
   root :to => "home#index"
 
   # The priority is based upon order of creation:

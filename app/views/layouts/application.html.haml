@@ -1,0 +1,45 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xmlns:fb" => "http://www.facebook.com/2008/fbml"}
+  %head
+    %title Kato
+    %link{:href => "http://fonts.googleapis.com/css?family=Gloria+Hallelujah", :rel => "stylesheet", :type => "text/css"}/
+    = include_stylesheets :app
+    = csrf_meta_tag
+  %body
+    #header
+      #logo
+        %h1#bbva BBVA Continental
+        %h2#contest_logo Concurso Más bueno que el Pan
+      %ul
+        %li= link_to "Sube tu receta", add_messages_path
+        %li Me gusta :3
+    .wrapper
+      %p.notice= notice
+      %p.alert= alert
+      .main
+        .content_list
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco.
+
+          = yield
+        .sidebar
+          %h3 Las más votadas
+          %ul#most_voted
+            = render :partial => "messages/message", :collection => @most_voted, :as => :message
+          .additional
+            = link_to "Ver todos", messages_path, :class=> "button"
+      #footer
+        = link_to "Términos y condiciones del concurso", terms_path, :class => "button"
+    #fb-root
+    %script{:src => "http://connect.facebook.net/en_US/all.js"}
+    :javascript
+      FB.init({
+      appId : '136578643087393',
+      status : true, // check login status
+      cookie : true, // enable cookies to allow the server to access the session
+      xfbml : true // parse XFBML
+      });
+    = include_javascripts :app
+    %script{:src => "http://js.pusherapp.com/1.8/pusher.min.js", :type => "text/javascript"}

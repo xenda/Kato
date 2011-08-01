@@ -1,10 +1,17 @@
-%li.message{:id => "message_#{message.id}"}
-  %h4= link_to message.title, message
-  .content= simple_format message.content
+%li.message{:id => "message_#{message.id}", :title => message.title}
+  .share_zone
+    .title
+      = link_to truncate(message.title, :length => 15), message, :title => message.title
+    .icons
+      = link_to "Facebook", "#", :class => "facebook_icon"
+      = link_to "Twitter", "#", :class => "twitter_icon"
+  .photo_zone
+    = link_to message do
+      - if message.photo_file_name
+        = image_tag message.photo.url(:thumb)
+      - else
+        = image_tag "default.jpg"
   .meta_data
     .avatar
-      - if message.user
-        = image_url "http://graph.facebook.com/#{message.user.facebook_uid}/picture", :size => "20x20"
-    .name= message.try(:user).try(:name)
     .votes
       = render :partial => "messages/message_data", :object => message
