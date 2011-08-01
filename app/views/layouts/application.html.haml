@@ -8,34 +8,35 @@
       %link{:href=>"/stylesheets/ie.css", :media=>"screen", :rel=>"stylesheet",  :type=>"text/css"}
     = csrf_meta_tag
   %body
-    #header
-      #logo
-        %h1#bbva
-          = link_to "BBVA Continental", "http://bbvacontinental.com.pe"
-        %h2#contest_logo
-          = link_to "Concurso Más bueno que el Pan", root_path
-      %ul
-        %li= link_to "Sube tu receta", add_messages_path, :class => "button"
-        %li.like
-          :erb
-            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=171113506293961&amp;xfbml=1"></script><fb:like href="http://alpha-kato.heroku.com" send="false" layout="button_count" width="60" show_faces="false" font=""></fb:like>
-    .wrapper
-      / %p.notice= notice
-      / %p.alert= alert
-      .main
-        .content_list
-          %p.description
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco.
+    .page
+      #header
+        #logo
+          %h1#bbva
+            = link_to "BBVA Continental", "http://bbvacontinental.com.pe"
+          %h2#contest_logo
+            = link_to "Concurso Más bueno que el Pan", root_path
+        %ul
+          %li= link_to "Sube tu receta", add_messages_path, :class => "button"
+          %li.like
+            :erb
+              <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=171113506293961&amp;xfbml=1"></script><fb:like href="http://alpha-kato.heroku.com" send="false" layout="button_count" width="60" show_faces="false" font=""></fb:like>
+      .wrapper
+        / %p.notice= notice
+        / %p.alert= alert
+        .main
+          .content_list
+            %p.description
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco.
 
-          = yield
-        .sidebar
-          %h3 Las más votadas
-          %ul#most_voted
-            = render :partial => "messages/message", :collection => @most_voted, :as => :message
-          .additional
-            = link_to "Ver todos", messages_path, :class=> "button"
+            = yield
+          .sidebar
+            %h3 Las más votadas
+            %ul#most_voted
+              = render :partial => "messages/message", :collection => @most_voted, :as => :message
+            .additional
+              = link_to "Ver todos", messages_path, :class=> "button"
       #footer
         = link_to "Términos y condiciones del concurso", terms_path, :class => "button"
     %script{:src => "http://connect.facebook.net/en_US/all.js"}

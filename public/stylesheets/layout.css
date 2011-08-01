@@ -19,8 +19,13 @@ background-image: -moz-linear-gradient(
 );*/
 
 	margin: 0px;
+	background: #000000 url(../images/back_whole.jpg) no-repeat -19px 492px;
+}
+
+.page {
 	padding: 10px;
-	background: #000000 url(../images/back_canasta.jpg) no-repeat 140px -339px;
+		background:  url(../images/back_canasta.jpg) no-repeat 140px -339px;
+
 }
 
 /*html {
