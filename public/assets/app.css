@@ -1173,3 +1173,14 @@ a#new_message, a.remove_message{
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
+.message input#vote_submit.button{
+  background-color: #F16529; 
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF8044), to(#F16529));
+  background: -moz-linear-gradient(-90deg, #FF8044, #F16529);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F16529, endColorstr=#FF8044);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F16529, endColorstr=#FF8044);
+  box-shadow: inset 0 1px 1px #F16529;
+    -moz-box-shadow: inset 0 1px 4px #F16529;
+    -webkit-box-shadow: inset 1 1px 1px #F16529;
+}
