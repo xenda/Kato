@@ -155,7 +155,7 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 }
 #header ul li.like {
 	margin-top: 0px;
-	width: 50px;
+	width: 72px;
 }
 
 #header ul li.like iframe {
@@ -248,6 +248,7 @@ h2#contest_logo a {
 	height: 100px;
 	text-indent: -9999px;
 	width: 150px;
+	margin-bottom: 9px;
 }
 
 .ingredients h3 {
@@ -719,6 +720,9 @@ ul#most_voted {
 
 .section_header h4.right {
 	margin-bottom: 13px;
+	margin-top: 5px;
+	color: #7f7f7f;
+	font: normal 14px Arial, Helvetica, Geneva, sans-serif;
 }
 
 
@@ -757,7 +761,8 @@ div#footer {
 }
 
 div.share_zone {
-	padding: 5px 10px;
+	padding: 5px 5px;
+	padding-left: 6px;
 	background-color: #404040;
 	font-size: 12px;
 	overflow: auto;
