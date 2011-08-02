@@ -5,8 +5,8 @@
       .share_zone
         .title
         .icons
-          = link_to "Facebook", "#", :class => "facebook_icon"
-          = link_to "Twitter", "#", :class => "twitter_icon"
+          = link_to "Facebook", "http://facebook.com/sharer.php?u=#{URI.escape(message_url)}", :class => "facebook_icon"
+          = link_to "Twitter", "http://twitter.com/share?url=#{URI.escape(message_url)}", :class => "twitter_icon"
       .photo_zone
         = link_to @message do
           - if @message.photo_file_name
