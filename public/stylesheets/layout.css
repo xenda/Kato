@@ -170,7 +170,7 @@ box-shadow: 0px 0px 10px 0px #11162e;*/
 }
 
 #header ul li.like {
-	margin-top: 0px;
+	margin-top: 1px;
 	width: 72px;
 }
 
@@ -199,6 +199,10 @@ h3 {
 	font-size: 18px;
 	margin-bottom: 0px;
 	color: #0247a4;
+}
+
+h3.comments {
+	margin-bottom: 10px;	
 }
 
 div.terms {
@@ -247,8 +251,8 @@ div#logo h1 {
 }
 div#logo h1 a {
 	/*float: left;*/
-	width: 150px;
-	height: 23px;
+	width: 220px;
+	height: 30px;
 	display: block;
 	text-indent: -9999px;
 	background: url(../images/logo_bbva.png) no-repeat;
@@ -262,9 +266,9 @@ h2#contest_logo {
 h2#contest_logo a {
 	float: left;
 	background-image: url(../images/logo_concurso.png);
-	height: 115px;
+	height: 105px;
 	text-indent: -9999px;
-	width: 190px;
+	width: 160px;
 	margin-bottom: 15px;
 	margin-left: 10px;
 	
@@ -275,8 +279,8 @@ h2#contest_logo a:hover {
 .ingredients h3 {
 	display: block;
 	height: 30px;
-	background: url(../images/ingredientes.png) no-repeat;
-	padding-left: 35px;
+	/*background: url(../images/ingredientes.png) no-repeat;*/
+	/*padding-left: 35px;*/
 	padding-top: 5px;
 	margin-top: 0px	
 }
@@ -284,8 +288,8 @@ h2#contest_logo a:hover {
 .how_to h3 {
 	display: block;
 	height: 30px;
-	background: url(../images/preparacion.png) no-repeat;
-	padding-left: 35px;
+	/*background: url(../images/preparacion.png) no-repeat;*/
+	/*padding-left: 35px;*/
 	padding-top: 5px;
 	margin-top: 0px;
 }
@@ -628,14 +632,15 @@ textarea#message_content.text.optional {
 	margin-right: 10px;	
 	padding: 2px 8px;
 	font-size: 10px;
-	background-color: #555;
+	background-color: #5c83ae;
+	/*background-color: #293f56;*/
 	color: #e4e8e8;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px
-	-webkit-box-shadow: inset 1px 1px 1px #000;
-	-moz-box-shadow: inset 1px 1px 1px #00000;
-	box-shadow: inset 0px 1px 1px 0px #000;
+	-webkit-box-shadow: inset 1px 1px 1px #293f56;
+	-moz-box-shadow: inset 1px 1px 1px #293f56;
+	box-shadow: inset 0px 1px 1px 0px #293f56;
 	margin-top: 0px !important;
 	margin-right: 0px;
 	font-weight: bold;
@@ -760,18 +765,18 @@ div.message {
 	margin-right: 10px;
 	width: 180px;
 	width: 155px;
-	-webkit-box-shadow: 0px 0px 8px 1px #c1c1c1;
+	-webkit-box-shadow: 0px 0px 15px 11px #5c83ae;
 	/*#ccd6e3*/
-  -moz-box-shadow: 0px 0px 8px 1px #c1c1c1;
-  box-shadow: 0px 0px 8px 1px #c1c1c1;
+  -moz-box-shadow: 0px 0px 8px 1px #5c83ae;
+  box-shadow: 0px 0px 11px 0px #5c83ae;
 	/*background-color: #ccd6e3;*/
 	/*background-color: #eef6fb;*/
 	
 	list-style-type: none;
 	margin-bottom: 20px;
 	overflow: hidden;
-	background-color: #323333;
   position: relative;
+	background: #456fa6 url(../images/background.png) no-repeat 0 center;
 }
 
 #footer a.button {
@@ -785,7 +790,7 @@ div.main {
 div#footer {
 	text-align: center;
 	margin: 10px 0px;
-	margin-top: 20px;
+	margin-top: 16px;
 }
 
 div.whole {
@@ -796,7 +801,7 @@ div.whole {
 div.share_zone {
 	padding: 5px 5px;
 	padding-left: 6px;
-	background-color: #404040;
+	background-color: #2c5a91;
 	font-size: 12px;
 	overflow: auto;
 	text-transform: capitalize;
@@ -805,6 +810,7 @@ div.share_zone a {
 	color: white;
 	text-decoration: none;
 	font-family: Arial, Helvetica, Geneva, sans-serif;
+	font-size: 11px;
 }
 
 div.share_zone a:hover {
@@ -867,9 +873,7 @@ div.meta_data {
 
 .message input#vote_submit.button,
 a.button {
-	background-color: #2d61a7; 
-    background: -webkit-gradient(linear, left top, left bottom, from(#5c7ca6), to(#2d61a7));
-    background: -moz-linear-gradient(-90deg, #5c7ca6, #3469a8);
+	background-color: #005396;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
 	margin-right: 0px;
@@ -953,7 +957,7 @@ div.how_to {
 
 .ingredients p,
 .how_to p {
-	margin-left: 35px;
+	/*margin-left: 35px;*/
 	font-size: 12px;
 	line-height: 1.6em;
 	color: #727272;
@@ -964,7 +968,7 @@ div.section_header {
 }
 
 .how_to p {
-	margin-left: 39px;
+	/*margin-left: 39px;*/
 }
 
 div.content ul {
