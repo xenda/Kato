@@ -272,7 +272,7 @@ h2#contest_logo {
 h2#contest_logo a {
 	float: left;
 	background-image: url(../images/logo_concurso.png);
-	height: 105px;
+	height: 100px;
 	text-indent: -9999px;
 	width: 160px;
 	margin-bottom: 15px;

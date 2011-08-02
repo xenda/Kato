@@ -14,15 +14,17 @@ class Message < ActiveRecord::Base
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :path => '/:attachment/:id/:filename'
 
-
-
   scope :most_voted, limit(4).order("votes_count DESC")
 
   attr_accessor :dni
 
   def self.validate_user(dni)
     # return true if dni == "42911429"
-    not Client.where(:document_number => dni).all.empty?
+    if Rails.env == "production"
+      # !Client.where(:document_number => dni).all.empty?
+    else
+      true
+    end
     # false
   end
 
