@@ -1,4 +1,4 @@
 <% @message.reload %>
 $('#message_<%= @message.id %> .votes').html('<%= escape_javascript(render(:partial => "/messages/message_data", :object =>@message)) %>');
 
-  openWindow('http://www.facebook.com/dialog/feed?link=<%= URI.escape(message_url(@message)) %>&picture=<%= URI.escape(@message.photo_url) %>&name=<%= URI.escape(@message.title) %>&caption=<%= URI.escape("Concurso M&aacute;s bueno que el Pan") %>&description=<%= URI.escape(@message.ingredients.to_s) %>&redirect_uri=<%= URI.escape(message_url(@message)) %>', 'after_vote', 560, 320);
+  openWindow('http://www.facebook.com/dialog/feed?link=<%= URI.escape(message_url(@message)) %>&picture=<%= URI.escape(@message.photo_url) %>&name=<%= URI.escape(@message.title) %>&caption=<%= URI.escape("Concurso Más bueno que el Pan") %>&description=<%= URI.escape(@message.ingredients.to_s) %>&redirect_uri=<%= URI.escape(message_url(@message)) %>&display=popup&app_id=136578643087393', 'after_vote', 560, 320);
