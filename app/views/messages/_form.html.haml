@@ -1,6 +1,17 @@
 = simple_form_for @message, :html =>{:multipart => true} do |f|
   = f.input :title, :label => "Nombre de tu receta", :required => false, :value => @message.title
-  = f.input :ingredients, :label => "Ingredientes"
+  = f.label "Ingredientes"
+  #ingredients
+    = f.fields_for :ingredients, @message.ingredients do |i|
+      %div.input_collection
+        = i.input :quantity, :label => false, :placeholder => "#", :input_html => {:size => 3 }
+        = i.input :ingredient_type, :label => false, :placeholder => "Tipo", :input_html => {:size => 14 }
+        = i.input :product, :label => false, :placeholder => "Ingrediente", :input_html => {:size => 28 }
+        - if i.object == @message.ingredients.last
+          %a{:href => "#", :id => "new_message"} +
+        -else
+          - unless i.object == @message.ingredients.first
+            %a{:href => "#", :class => "remove_message"} -
   = f.input :photo, :label => "Sube la mejor foto de tu receta"
   = f.input :content, :label => "¿Cómo se prepara?"
 

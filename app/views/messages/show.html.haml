@@ -22,7 +22,10 @@
     .ingredients
       %h3 Ingredientes
       .content
-        = simple_format @message.ingredients
+        %ul
+        - @message.ingredients.each do |ingredient|
+          %li
+            #{ingredient.quantity} #{ingredient.ingredient_type} de #{ingredient.product}
     .how_to
       %h3 Preparación
       .content

@@ -3,6 +3,8 @@ class Message < ActiveRecord::Base
   # associations
   belongs_to :user
   belongs_to :category
+  has_many :ingredients
+  accepts_nested_attributes_for :ingredients
 
   validates_presence_of :title, :on => :create, :message => "no puede estar vac&iacute;o"
 

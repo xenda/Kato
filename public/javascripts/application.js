@@ -15,6 +15,32 @@ function openWindow(url, name, width, height){
 
 $(function(){
 
+  $('a.remove_message').live('click', function(event){
+    event.preventDefault();
+    $(this).parent().remove();
+
+    rename_inputs();
+  });
+
+  $('a#new_message').live('click', function(event){
+    event.preventDefault();
+    var index = $('#ingredients .input_collection').length;
+    $('#ingredients a#new_message').remove();
+    $('#ingredients .input_collection').last().append('<a class="remove_message" href="#">-</a>');
+    $('#ingredients').append('<div class="input_collection"><div class="input string optional"><input class="string optional" id="message_ingredients_attributes_'+index+'_quantity" maxlength="255" name="message[ingredients_attributes]['+index+'][quantity]" placeholder="#" size="3" type="text"></div><div class="input string optional"><input class="string optional" id="message_ingredients_attributes_'+index+'_ingredient_type" maxlength="255" name="message[ingredients_attributes]['+index+'][ingredient_type]" placeholder="Tipo" size="14" type="text"></div><div class="input string optional"><input class="string optional" id="message_ingredients_attributes_'+index+'_product" maxlength="255" name="message[ingredients_attributes]['+index+'][product]" placeholder="Ingrediente" size="28" type="text"></div><a href="#" id="new_message">+</a></div>');
+
+    rename_inputs();
+  });
+
+  function rename_inputs(){
+    $('#ingredients .input_collection').each(function(index, item){
+      var inputs = $(item).find('.input input');
+      $(inputs[0]).attr({'id':'message_ingredients_attributes_'+index+'_quantity', 'name':'message[ingredients_attributes]['+index+'][quantity]'});
+      $(inputs[1]).attr({'id':'message_ingredients_attributes_'+index+'_ingredient_type', 'name':'message[ingredients_attributes]['+index+'][ingredient_type]'});
+      $(inputs[2]).attr({'id':'message_ingredients_attributes_'+index+'_product', 'name':'message[ingredients_attributes]['+index+'][product]'});
+    });
+  }
+
   // var $container = $('#messages_list');
   // $container.imagesLoaded(function(){
   //   $container.masonry({
