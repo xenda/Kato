@@ -331,6 +331,7 @@ p.description {
 	margin-bottom: 25px;
 	font-size: 35px;
 	line-height: 1em;
+	text-transform: capitalize;
 }
 
 h3.color_0 {
@@ -1007,8 +1008,23 @@ a.media {
 .inner div.photo_zone a {
 	overflow: hidden;
 	display: block;
-	height: auto !important;
 	background-color: black;
+}
+
+div.field_with_errors {
+	background-color: #d8dfeb;
+	padding: 10px 10px;
+	margin-bottom: 10px;
+}
+
+span.error {
+	display: block;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+	color: #51575f;
+}
+
+.field_with_errors input#message_title.string.optional {
+	margin-bottom: 5px;
 }
 
 

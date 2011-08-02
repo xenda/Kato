@@ -6,7 +6,7 @@ class Message < ActiveRecord::Base
   has_many :ingredients
   accepts_nested_attributes_for :ingredients
 
-  validates_presence_of :title, :on => :create, :message => "no puede estar vac&iacute;o"
+  validates_presence_of :title, :on => :create, :message => "debes agregar un nombre"
 
   has_attached_file :photo,
     :styles => {:thumb => "180x150#", :big => "570x300#"},
