@@ -24,7 +24,7 @@ background-image: -moz-linear-gradient(
 }
 
 .page {
-		background: transparent url(../images/bread.png) no-repeat -47px -219px;
+		background: transparent url(../images/bread.png) no-repeat -47px -129px;
 
 }
 
@@ -646,7 +646,7 @@ textarea#message_content.text.optional {
 	margin-right: 10px;	
 	padding: 2px 8px;
 	font-size: 10px;
-	background-color: #d3c5b4;
+	background-color: #f2e7d7;
 	/*background-color: #92887c;*/
 	color: #5f6060;
 	-webkit-border-radius: 3px;
@@ -790,7 +790,7 @@ div.message {
 	margin-bottom: 20px;
 	overflow: hidden;
   position: relative;
-	background-color: #ffefda;
+	background-color: #f7f1e6;
 }
 body.list ul#messages_list {
 	padding-bottom: 0px;
@@ -843,7 +843,7 @@ div.share_zone {
 	font-size: 12px;
 	overflow: auto;
 	text-transform: capitalize;
-	background-color: #afa395;
+	background-color: #d9d0c1;
 	color: #9e9e9e;
 }
 
