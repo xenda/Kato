@@ -672,7 +672,7 @@ textarea#message_content.text.optional {
         display: list-item; }
     form fieldset > ol > li.error input[type=text], form fieldset > ol > li.error input[type=password], form fieldset > ol > li.error input[type=email], form fieldset > ol > li.error input[type=url], form fieldset > ol > li.error input[type=tel], form fieldset > ol > li.error textarea {
       border: 1px solid #cc0000; }
-  form input[type=submit],a.button {
+  form input[type=submit], a.button {
     /*box-shadow: 0 1px 2px #aaaaaa;
     -moz-box-shadow: 0 1px 2px #aaaaaa;
     -webkit-box-shadow: 0 1px 2px #aaaaaa;*/
@@ -694,7 +694,7 @@ textarea#message_content.text.optional {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    text-shadow: #456fa6 1px 2px 5px;
+    /*text-shadow: #456fa6 1px 2px 5px;*/
     text-decoration: none;
     margin-right: 3px;
     font-weight: normal;
