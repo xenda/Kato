@@ -13,6 +13,12 @@ class MessagesController < InheritedResources::Base
     @messages = Message.order("created_at DESC").all
   end
 
+  def show
+    show!{
+      render :show, :layout => :open_graph
+    }
+  end
+
   def add
     @message = Message.new
     @messsages = Message.order("created_at DESC").all
