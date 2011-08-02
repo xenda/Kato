@@ -60,15 +60,22 @@ ActiveRecord::Schema.define(:version => 20110802173408) do
     t.string   "quantity"
     t.string   "ingredient_type"
     t.string   "product"
+
+  create_table "clients", :force => true do |t|
+    t.string   "name"
+    t.string   "document_type"
+    t.string   "document_number"
+    t.string   "middle_name"
+    t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "messages", :force => true do |t|
     t.integer  "user_id"
-    t.string   "title",              :default => "Mi receta...", :null => false
+    t.string   "title",              :default => "", :null => false
     t.text     "content"
-    t.integer  "votes_count",        :default => 0,              :null => false
+    t.integer  "votes_count",        :default => 0,  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

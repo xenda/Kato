@@ -21,8 +21,9 @@ class Message < ActiveRecord::Base
   attr_accessor :dni
 
   def self.validate_user(dni)
-    return true if dni == "42911429"
-    false
+    # return true if dni == "42911429"
+    not Client.where(:document_number => dni).all.empty?
+    # false
   end
 
   def photo_url

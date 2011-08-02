@@ -543,17 +543,43 @@ Cufon.replace('h1,h2,h3'); // Works without a selector engine
 function openWindow(url, name, width, height){
 	centerWidth = (window.screen.width - width)/2;
 	centerHeight = (window.screen.height - height)/2;
-	
-	newWindow = window.open(url, name, 'resize=no,toolbar=no,width=' + width + 
-    ',height=' + height + 
-    ',left=' + centerWidth + 
+
+	newWindow = window.open(url, name, 'resize=no,toolbar=no,width=' + width +
+    ',height=' + height +
+    ',left=' + centerWidth +
     ',top=' + centerHeight);
-	
+
 	newWindow.focus();
 	return newWindow.name;
 }
 
 $(function(){
+
+  $('a.remove_message').live('click', function(event){
+    event.preventDefault();
+    $(this).parent().remove();
+
+    rename_inputs();
+  });
+
+  $('a#new_message').live('click', function(event){
+    event.preventDefault();
+    var index = $('#ingredients .input_collection').length;
+    $('#ingredients a#new_message').remove();
+    $('#ingredients .input_collection').last().append('<a class="remove_message" href="#">-</a>');
+    $('#ingredients').append('<div class="input_collection"><div class="input string optional"><input class="string optional" id="message_ingredients_attributes_'+index+'_quantity" maxlength="255" name="message[ingredients_attributes]['+index+'][quantity]" placeholder="#" size="3" type="text"></div><div class="input string optional"><input class="string optional" id="message_ingredients_attributes_'+index+'_ingredient_type" maxlength="255" name="message[ingredients_attributes]['+index+'][ingredient_type]" placeholder="Tipo" size="14" type="text"></div><div class="input string optional"><input class="string optional" id="message_ingredients_attributes_'+index+'_product" maxlength="255" name="message[ingredients_attributes]['+index+'][product]" placeholder="Ingrediente" size="28" type="text"></div><a href="#" id="new_message">+</a></div>');
+
+    rename_inputs();
+  });
+
+  function rename_inputs(){
+    $('#ingredients .input_collection').each(function(index, item){
+      var inputs = $(item).find('.input input');
+      $(inputs[0]).attr({'id':'message_ingredients_attributes_'+index+'_quantity', 'name':'message[ingredients_attributes]['+index+'][quantity]'});
+      $(inputs[1]).attr({'id':'message_ingredients_attributes_'+index+'_ingredient_type', 'name':'message[ingredients_attributes]['+index+'][ingredient_type]'});
+      $(inputs[2]).attr({'id':'message_ingredients_attributes_'+index+'_product', 'name':'message[ingredients_attributes]['+index+'][product]'});
+    });
+  }
 
   // var $container = $('#messages_list');
   // $container.imagesLoaded(function(){
@@ -578,8 +604,9 @@ $('.icons a').click(function(event){
   openWindow($(this).attr('href'), 'social', 550, 300);
 });
 
-$('li.message').each(function(index,item){
-  $(item).append('<div class="tooltip" id="tooltip_' + $(item).attr('id') + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
+$('li.message.longer').each(function(index,item){
+  $(item).append('<div class="tooltip" title="" id="tooltip_' + $(item).attr('id') + '"><div class="content" title="">' + $(item).attr('title') + '</div><div class="arrow" title=""></div></div>');
+  $(item).attr('title',""); //  = "";
 });
 
 $('li.message .tooltip').each(function(index, item){

@@ -16,7 +16,8 @@ class MessagesController < InheritedResources::Base
 
   def index
     @message = Message.new
-    @messages = Message.order("created_at DESC").all
+    @messages = Message.paginate :page => params[:page], :per_page => 16, :order => "created_at DESC"  #order("created_at DESC").paginateall
+    render "index", :layout => "messages_list"
   end
 
   def show

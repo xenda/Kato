@@ -1,4 +1,4 @@
-%li.message{:id => "message_#{message.id}", :title => message.title}
+%li.message{:id => "message_#{message.id}", :title => message.title, :class => truncating_text_class(message.title)}
   .share_zone
     .title
       = link_to truncate(message.title, :length => 15), message, :title => message.title
