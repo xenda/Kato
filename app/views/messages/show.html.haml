@@ -24,7 +24,7 @@
       .content
         %ul
           - @message.ingredients.each do |ingredient|
-            - unless ingredient.quantity.blank? || ingredient.product.blank?
+            - unless ingredient.product.blank?
               %li
                 =ingredient.quantity
                 - unless ingredient.ingredient_type.blank?
