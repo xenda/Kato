@@ -1,4 +1,4 @@
 <% @message.reload %>
 $('#message_<%= @message.id %> .votes').html('<%= escape_javascript(render(:partial => "/messages/message_data", :object =>@message)) %>');
 
- streamPublish("Concurso Más bueno que el Pan",'<%= @message.title %>','<%= message_url(@message) %>','<%=  @message.content.strip.split.join(' ') %>','<%= URI.escape(@message.photo_url) %>');
+  openWindow('http://www.facebook.com/dialog/feed?link=<%= URI.escape(message_url(@message)) %>&picture=<%= URI.escape(@message.photo_url) %>&name=<%= URI.escape(@message.title) %>&caption=<%= URI.escape("Concurso M&aacute;s bueno que el Pan") %>&description=<%= URI.escape(@message.ingredients.to_s) %>&redirect_uri=<%= URI.escape(message_url(@message)) %>', 'after_vote', 560, 320);
