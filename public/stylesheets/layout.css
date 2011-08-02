@@ -267,6 +267,12 @@ div#logo h1 a {
 	overflow: hidden;
 
 }
+
+div.info {
+	font: 13px/1.6em Arial, Helvetica, Geneva, sans-serif;
+	color: #808080;
+	margin-top: 20px;
+}
 h2#contest_logo {
 	overflow: auto;
 	margin-bottom: 0px;
@@ -1124,4 +1130,14 @@ a#new_message, a.remove_message{
   box-shadow: inset 0 1px 1px #F16529;
     -moz-box-shadow: inset 0 1px 4px #F16529;
     -webkit-box-shadow: inset 1 1px 1px #F16529;
+}
+
+div.info a {
+	color: #0352a7;
+	font-weight: bold;
+	display: block;
+}
+
+div.info a:hover {
+	background-color: transparent;
 }
