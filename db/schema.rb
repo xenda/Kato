@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110801190650) do
+ActiveRecord::Schema.define(:version => 20110802173408) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(:version => 20110801190650) do
     t.datetime "updated_at"
   end
 
+  create_table "ingredients", :force => true do |t|
+    t.integer  "message_id"
+    t.string   "quantity"
+    t.string   "ingredient_type"
+    t.string   "product"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "messages", :force => true do |t|
     t.integer  "user_id"
     t.string   "title",              :default => "Mi receta...", :null => false
@@ -66,7 +75,6 @@ ActiveRecord::Schema.define(:version => 20110801190650) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.string   "photo_content_type"
-    t.text     "ingredients"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

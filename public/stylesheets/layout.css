@@ -1011,3 +1011,35 @@ div.photo_zone a {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
+
+.input_collection{
+  overflow:hidden;
+}
+.input_collection .input input{
+  width:auto;
+  float:left;
+  margin-top:2px;
+  margin-right:10px;
+}
+
+a#new_message, a.remove_message{
+  display:inline-block;
+  width:30px;
+  line-height:36px;
+  text-align:center;
+  color:white;
+  text-decoration:none;
+  box-shadow: inset 0 1px 1px #7591b5;
+    -moz-box-shadow: inset 0 1px 4px #7591b5;
+    -webkit-box-shadow: inset 1 1px 1px #7591b5;
+  text-transform:uppercase;
+  font-weight:bold;
+  background-color: #2d61a7; 
+  background: -webkit-gradient(linear, left top, left bottom, from(#5c7ca6), to(#2d61a7));
+  background: -moz-linear-gradient(-90deg, #5c7ca6, #3469a8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2d61a7, endColorstr=#5c7ca6);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

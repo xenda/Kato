@@ -5,7 +5,13 @@ class MessagesController < InheritedResources::Base
   before_filter :load_most_voted
 
   def create
-    create! { root_path }
+    create! {
+      @message.ingredients.each do |ingredient|
+        ingredient.message = @message
+        ingredient.save
+      end
+      root_path
+    }
   end
 
   def index
@@ -16,6 +22,12 @@ class MessagesController < InheritedResources::Base
   def show
     @message = Message.find(params[:id])
     render :show, :layout => "open_graph"
+  end
+
+  def new
+    @message = Message.new
+    5.times{ @message.ingredients.build }
+    new!
   end
 
   def add

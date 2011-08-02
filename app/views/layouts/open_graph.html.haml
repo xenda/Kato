@@ -8,7 +8,7 @@
       %link{:href=>"/stylesheets/ie.css", :media=>"screen", :rel=>"stylesheet",  :type=>"text/css"}
     = csrf_meta_tag
     %meta{:content => @message.title, :property => "og:title"}/
-    %meta{:content => @message.ingredients, :property => "og:description"}/
+    %meta{:content => @message.content, :property => "og:description"}/
     %meta{:content => @message.photo.url(:thumb), :property => "og:image"}/
   %body
     .page
