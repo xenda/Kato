@@ -201,6 +201,10 @@ h3 {
 	color: #0247a4;
 }
 
+h3.comments {
+	margin-bottom: 10px;	
+}
+
 div.terms {
 	width: 470px;
 	margin-top: 30px;
@@ -275,8 +279,8 @@ h2#contest_logo a:hover {
 .ingredients h3 {
 	display: block;
 	height: 30px;
-	background: url(../images/ingredientes.png) no-repeat;
-	padding-left: 35px;
+	/*background: url(../images/ingredientes.png) no-repeat;*/
+	/*padding-left: 35px;*/
 	padding-top: 5px;
 	margin-top: 0px	
 }
@@ -284,8 +288,8 @@ h2#contest_logo a:hover {
 .how_to h3 {
 	display: block;
 	height: 30px;
-	background: url(../images/preparacion.png) no-repeat;
-	padding-left: 35px;
+	/*background: url(../images/preparacion.png) no-repeat;*/
+	/*padding-left: 35px;*/
 	padding-top: 5px;
 	margin-top: 0px;
 }
@@ -948,7 +952,7 @@ div.how_to {
 
 .ingredients p,
 .how_to p {
-	margin-left: 35px;
+	/*margin-left: 35px;*/
 	font-size: 12px;
 	line-height: 1.6em;
 	color: #727272;
@@ -959,7 +963,7 @@ div.section_header {
 }
 
 .how_to p {
-	margin-left: 39px;
+	/*margin-left: 39px;*/
 }
 
 div.content ul {
