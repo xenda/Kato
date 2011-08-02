@@ -17,7 +17,10 @@
             %h2#contest_logo
               = link_to "Concurso Más bueno que el Pan", root_path
           %ul
-            %li= link_to "Sube tu receta", add_messages_path, :class => "button"
+            %li
+              %a{:href => add_messages_path, :class => "button"}
+                %div
+                  Sube tu receta
             %li.like
               :erb
                 <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=171113506293961&amp;xfbml=1"></script><fb:like href="http://alpha-kato.heroku.com" send="false" layout="button_count" width="60" show_faces="false" font=""></fb:like>

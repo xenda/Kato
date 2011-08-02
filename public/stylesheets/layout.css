@@ -983,3 +983,21 @@ div.photo_zone a {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
+
+a.button{
+  background: url('/images/button.png') no-repeat;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-shadow: none;
+  color: black;
+  height: 22px;
+  padding: 0 0 0 10px;
+}
+
+a.button div{
+  background: url('/images/button.png') no-repeat right;
+  height: 22px;
+  padding: 0 10px 0 0;
+  line-height: 22px;
+}
