@@ -3,12 +3,12 @@ Cufon.replace('h1,h2,h3'); // Works without a selector engine
 function openWindow(url, name, width, height){
 	centerWidth = (window.screen.width - width)/2;
 	centerHeight = (window.screen.height - height)/2;
-	
-	newWindow = window.open(url, name, 'resize=no,toolbar=no,width=' + width + 
-    ',height=' + height + 
-    ',left=' + centerWidth + 
+
+	newWindow = window.open(url, name, 'resize=no,toolbar=no,width=' + width +
+    ',height=' + height +
+    ',left=' + centerWidth +
     ',top=' + centerHeight);
-	
+
 	newWindow.focus();
 	return newWindow.name;
 }
@@ -38,8 +38,9 @@ $('.icons a').click(function(event){
   openWindow($(this).attr('href'), 'social', 550, 300);
 });
 
-$('li.message').each(function(index,item){
-  $(item).append('<div class="tooltip" id="tooltip_' + $(item).attr('id') + '"><div class="content">' + $(item).attr('title') + '</div><div class="arrow"></div></div>');
+$('li.message.longer').each(function(index,item){
+  $(item).append('<div class="tooltip" title="" id="tooltip_' + $(item).attr('id') + '"><div class="content" title="">' + $(item).attr('title') + '</div><div class="arrow" title=""></div></div>');
+  $(item).attr('title',""); //  = "";
 });
 
 $('li.message .tooltip').each(function(index, item){

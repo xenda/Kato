@@ -173,6 +173,7 @@ GEM
     tzinfo (0.3.28)
     warden (1.0.4)
       rack (>= 1.0)
+    will_paginate (3.0.pre4)
     xml-simple (1.0.14)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
@@ -199,3 +200,4 @@ DEPENDENCIES
   rails-footnotes (>= 3.7)
   rake (= 0.8.7)
   simple_form
+  will_paginate (~> 3.0.pre4)

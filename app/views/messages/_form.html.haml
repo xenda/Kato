@@ -1,5 +1,8 @@
-= simple_form_for @message do |f|
-  = f.input :title, :label => "Tu idea"
-  = f.input :content, :label => "Coméntala"
-  = f.association :category
-  = f.submit 'Save'
+= simple_form_for @message, :html =>{:multipart => true} do |f|
+  = f.input :title, :label => "Nombre de tu receta", :required => false, :value => @message.title
+  = f.input :ingredients, :label => "Ingredientes"
+  = f.input :photo, :label => "Sube la mejor foto de tu receta"
+  = f.input :content, :label => "¿Cómo se prepara?"
+
+  = f.input :user_id, :as => :hidden, :value => current_user.id if current_user
+  = f.submit 'Enviar receta'

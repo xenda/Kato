@@ -1,10 +1,8 @@
-.video
-  :erb
-    <iframe width="425" height="349" src="http://www.youtube.com/embed/r_WERPN8KO8"; frameborder="0" allowfullscreen></iframe>
-
 .section_header
-  %h3.left Las últimas recetas
   %h4.right Vota por tus recetas favoritas
 
 %ul#messages_list
   = render @messages
+
+.pagination
+  = will_paginate @messages, :previous_label => "Anterior", :next_label => "Siguiente"
