@@ -21,7 +21,7 @@ class Message < ActiveRecord::Base
   def self.validate_user(dni)
     # return true if dni == "42911429"
     if Rails.env == "production"
-      # !Client.where(:document_number => dni).all.empty?
+      !Client.where(:document_number => dni).all.empty?
     else
       true
     end

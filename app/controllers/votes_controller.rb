@@ -9,7 +9,10 @@ class VotesController < InheritedResources::Base
     @vote.user = current_user
     @vote.user ||= User.first
     @message = @vote.message
-    create!
+    if Vote.where(:user_id => @vote.user_id, :message_id => @vote.message_id).all.empty?
+      logger.info "Ok"
+      create!
+    end
   end
 
   private
