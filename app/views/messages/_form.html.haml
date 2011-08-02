@@ -1,5 +1,5 @@
 = simple_form_for @message, :html =>{:multipart => true} do |f|
-  = f.input :title, :label => "Nombre de tu receta", :required => false, :value => @message.title
+  = f.input :title, :label => "Nombre de tu receta", :value => @message.title
   = f.label "Ingredientes"
   #ingredients
     = f.fields_for :ingredients, @message.ingredients do |i|
@@ -12,7 +12,8 @@
         -else
           - unless i.object == @message.ingredients.first
             %a{:href => "#", :class => "remove_message"} -
-  = f.input :photo, :label => "Sube la mejor foto de tu receta"
+    %span.hint Ej. 5 - OZ - Azúcar
+  = f.input :photo, :label => "Sube la mejor foto de tu receta", :hint => "Sólo se permiten imágenes (extensiones .jpg, .png, .gif). Tamaño máximo de upload: 2MB"
   = f.input :content, :label => "¿Cómo se prepara?"
 
   = f.input :user_id, :as => :hidden, :value => current_user.id if current_user

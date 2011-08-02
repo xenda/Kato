@@ -541,19 +541,35 @@ textarea#message_ingredients.text.optional {
 div.flash {
 	padding: 10px 20px;
 	margin: 20px 0px;
-	background-color: #ffd0da;
 	border-top: 1px solid #fcb4b3;
 	border-bottom: 1px solid #fcb4b3;
-	color: #e45060;
 	font: normal normal 12px Arial, Helvetica, Geneva, sans-serif;
+	background-color: #d8dfeb;
+	padding: 10px 10px;
+	margin-bottom: 10px;
+	display: block;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+	color: #51575f;
+	
 }
     form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=url]:focus, form input[type=tel]:focus, form textarea:focus {
       border: 1px solid #c3c9ce;
-      box-shadow: 0 0 2px #0352a7;
-      -moz-box-shadow: 0 0 2px #0352a7;
-      -webkit-box-shadow: 0 0 5px #0352a7;
+      box-shadow: 0 0 1px #0352a7;
+      -moz-box-shadow: 0 0 1px #0352a7;
+      -webkit-box-shadow: 0 0 1px #0352a7;
       outline: 0px !important; 
       }
+
+span.hint {
+	display: block;
+	font: 11px Arial, Helvetica, Geneva, sans-serif;
+	color: #565656;
+	margin-bottom: 20px;
+}
+
+div#ingredients {
+	margin-bottom: 10px;
+}
 
 input#message_title.string.required {
 	font-size: 16px;
@@ -1012,15 +1028,15 @@ a.media {
 }
 
 div.field_with_errors {
-	background-color: #d8dfeb;
+	background-color: #d3dbe9;
 	padding: 10px 10px;
 	margin-bottom: 10px;
 }
 
 span.error {
 	display: block;
-	font-family: Arial, Helvetica, Geneva, sans-serif;
-	color: #51575f;
+	color: #989297;
+	font: 12px Arial, Helvetica, Geneva, sans-serif;
 }
 
 .field_with_errors input#message_title.string.optional {
