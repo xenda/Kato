@@ -23,9 +23,13 @@
       %h3 Ingredientes
       .content
         %ul
-        - @message.ingredients.each do |ingredient|
-          %li
-            #{ingredient.quantity} #{ingredient.ingredient_type} de #{ingredient.product}
+          - @message.ingredients.each do |ingredient|
+            - unless ingredient.quantity.blank? || ingredient.product.blank?
+              %li
+                =ingredient.quantity
+                - unless ingredient.ingredient_type.blank?
+                  = "#{ingredient.ingredient_type} de"
+                = ingredient.product
     .how_to
       %h3 Preparación
       .content
