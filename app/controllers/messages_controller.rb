@@ -47,6 +47,13 @@ class MessagesController < InheritedResources::Base
     end
   end
 
+  def publish
+    @message = Message.find(params[:id])
+    @message.published = true
+    @message.save
+    redirect_to message_path(@message)
+  end
+
   private
 
   def load_most_voted

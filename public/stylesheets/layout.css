@@ -1182,3 +1182,14 @@ input#vote_submit.button.disabled {
     -moz-box-shadow: inset 0 1px 4px #c1c1c1;
     -webkit-box-shadow: inset 1 1px 1px #c1c1c1;
 }
+
+.message_actions{
+  overflow:hidden;
+  padding:0 20px;
+}
+
+.message_actions a.button{
+  margin:0 5px;
+  float:right;
+  font-size:1.0em;
+}

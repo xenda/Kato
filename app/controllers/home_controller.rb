@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = Message.order("created_at DESC").limit(6).all
+    @messages = Message.published.order("created_at DESC").limit(6).all
 
     if params[:signed_request]
       fb_auth_client.from_signed_request(params[:signed_request])

@@ -35,6 +35,11 @@
       .content
         = simple_format @message.content
 
+  - unless @message.published?
+    .message_actions
+      %a.button{:href => publish_message_path(@message)} Mandar
+      %a.button{:href => edit_message_path(@message)} Editar
+
   %h3.comments Deja tus comentarios
   #fb-root{:style => "display:block;clear:both"}
   %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}

@@ -12,7 +12,7 @@
         -else
           - unless i.object == @message.ingredients.first
             %a{:href => "#", :class => "remove_message"} -
-    %span.hint Ej. 5 - OZ - Azúcar
+  %span.hint Ej. 5 - OZ - Azúcar
   = f.input :photo, :label => "Sube la mejor foto de tu receta", :hint => "Sólo se permiten imágenes (extensiones .jpg, .png, .gif). Tamaño máximo de upload: 2MB"
   = f.input :content, :label => "¿Cómo se prepara?"
 

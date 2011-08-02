@@ -12,6 +12,9 @@ Kato::Application.routes.draw do
       get 'add'
       post 'verify'
     end
+    member do
+      get 'publish'
+    end
   end
 
   devise_for :users do
