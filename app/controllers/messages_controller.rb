@@ -15,7 +15,7 @@ class MessagesController < InheritedResources::Base
 
   def show
     @message = Message.find(params[:id])
-    render :show, :layout => :open_graph
+    render :show, :layout => "open_graph"
   end
 
   def add
