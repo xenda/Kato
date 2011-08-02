@@ -24,7 +24,7 @@ background-image: -moz-linear-gradient(
 }
 
 .page {
-		background: transparent url(../images/bread.png) no-repeat -47px -129px;
+		background: transparent url(../images/bread.png) no-repeat -207px 12px;
 
 }
 
@@ -95,7 +95,7 @@ div.sidebar {
 }
 div.input {
 	width: 500px;
-	padding-left: 5px;
+	/*padding-left: 5px;*/
 }
 
 div.input.select.required {
@@ -124,6 +124,7 @@ box-shadow: 0px 0px 10px 0px #becade;
 #header ul {
 	float: right;
 	margin-top: 0px;
+	padding: 0px;
 }
 
 div.video video,
@@ -250,6 +251,7 @@ div#logo h1 {
 	overflow: auto;
 	font-family: Arial;
 	text-indent: -9999px;
+	margin-bottom: 0px;
 }
 
 .section_header h3.left {
@@ -258,12 +260,12 @@ div#logo h1 {
 div#logo h1 a {
 	/*float: left;*/
 	width: 220px;
-	height: 30px;
+	height: 28px;
 	display: block;
 	text-indent: -9999px;
-	background: url(../images/logo_bbva.png) no-repeat;
+	background: url(../images/logo_bbva.png) no-repeat -9px -9px;
 	overflow: hidden;
-	margin-left: 10px;
+
 }
 h2#contest_logo {
 	overflow: auto;
@@ -272,12 +274,17 @@ h2#contest_logo {
 h2#contest_logo a {
 	float: left;
 	background-image: url(../images/logo_concurso.png);
-	height: 100px;
+	height: 96px;
 	text-indent: -9999px;
 	width: 160px;
 	margin-bottom: 15px;
-	margin-left: 10px;
+	margin-top: 15px;
 	
+}
+
+#contest_logo a {
+	margin-left: 25px;
+	margin-top: 5px;
 }
 h2#contest_logo a:hover {
 	background-color: transparent;
@@ -637,6 +644,7 @@ textarea#message_content.text.optional {
     padding: .6em 1.4em .5em 1.3em;
     border: none;
     color: #f7f7f7;
+    color:white;
 	font-style: normal;
 }
 
@@ -832,7 +840,7 @@ div#footer {
 }
 
 div.whole {
-	background: url(../images/bread_top.png) no-repeat 400px 67px;
+	/*background: url(../images/bread_top.png) no-repeat 390px -163px;*/
 		padding: 10px;
 }
 

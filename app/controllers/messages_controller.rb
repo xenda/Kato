@@ -42,7 +42,7 @@ class MessagesController < InheritedResources::Base
     redirect_to new_message_path
     else
       @message = Message.new(params[:message])
-      flash[:notice] = "No te encontramos en nuestra base de datos"
+      flash[:not_found] = "No te encontramos en nuestra base de datos"
       render :add
     end
   end
