@@ -10,23 +10,7 @@
   %body
     .page
       .whole
-        #header
-          #logo
-            %h1#bbva
-              = link_to "BBVA Continental", "http://bbvacontinental.com.pe", :target => "_blank"
-            %h2#contest_logo
-              = link_to "Concurso Más bueno que el Pan", root_path
-          %ul
-            %li.like
-              :erb
-                <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=171113506293961&amp;xfbml=1"></script><fb:like href="http://alpha-kato.heroku.com" send="false" layout="button_count" width="60" show_faces="false" font=""></fb:like>
-            %li
-              %ul
-                %li
-                  %a{:href => root_path, :class => "button"} Inicio
-                %li
-                  %a{:href => add_messages_path, :class => "button"} Sube tu receta
-
+        = render 'layouts/header'
         .wrapper
           / %p.notice= notice
           / %p.alert= alert
