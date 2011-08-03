@@ -10,7 +10,7 @@ class MessagesController < InheritedResources::Base
         ingredient.message = @message
         ingredient.save
       end
-      root_path
+      message_path(@message)
     }
   end
 
