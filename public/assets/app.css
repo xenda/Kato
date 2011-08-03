@@ -129,7 +129,7 @@ div.content_list {
 }
 
 div.message_content {
-	overflow: auto;	
+	overflow: hidden;	
 	/*padding-left: 20px;*/
 	margin-bottom: 20px;
 	padding-left: 4px;
@@ -870,7 +870,7 @@ textarea#message_content.text.optional {
 #messages_list,
 ul#most_voted {
 	padding: 10px;
-	overflow: auto;
+	overflow: hidden;
 	margin-bottom: 0px;
   margin-left: 0px;
 }
