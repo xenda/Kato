@@ -39,7 +39,7 @@ Devise.setup do |config|
   config.facebook_api_secret = "4d543e7427a437b03fecef6618ce0585"
   config.facebook_permissions = 'offline_access,email,publish_stream'
   config.facebook_canvas_app = true
-  config.facebook_canvas_url = 'http://apps.facebook.com/alpha-kato/'
+  config.facebook_canvas_url = 'http://apps.facebook.com/masbuenoqueelpan/'
   # Tell if authentication through request.params is enabled. True by default.
   # config.params_authenticatable = true
 

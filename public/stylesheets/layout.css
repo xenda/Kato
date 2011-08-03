@@ -1031,9 +1031,11 @@ a.media {
 }
 
 .inner div.photo_zone a {
-	overflow: hidden;
 	display: block;
-	background-color: black;
+	height: auto;
+	background-color: #f7f1e6;
+	padding: 0px;
+	padding-bottom: 0px;
 }
 
 div.field_with_errors {
