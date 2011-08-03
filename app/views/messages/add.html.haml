@@ -1,11 +1,11 @@
 %h1 Participa y envíanos tu receta
 
+.info
+  Para participar debes contar con una Cuenta Ganadora del BBVA Continental.
+  = link_to "Entérate cómo adquirirla aquí", "http://bbvacontinental.pe/tlpu/jsp/pe/esp/paratiN/depositos/cahorro/ahorrsupdep/index.jsp", :target => "_blank"
+
 = simple_form_for @message, :url => verify_messages_path ,:html =>{:multipart => true} do |f|
   - if flash[:not_found]
     .flash= flash[:not_found]
   = f.input :dni, :label => "Número de DNI"
   = f.submit 'Siguiente'
-
-.info
-  Para participar debes contar con una Cuenta Ganadora del BBVA Continental.
-  = link_to "Entérate cómo adquirirla aquí", "http://bbvacontinental.pe/tlpu/jsp/pe/esp/paratiN/depositos/cahorro/ahorrsupdep/index.jsp", :target => "_blank"
