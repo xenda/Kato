@@ -16,7 +16,7 @@ class MessagesController < InheritedResources::Base
 
   def index
     @message = Message.new
-    @messages = Message.paginate :page => params[:page], :per_page => 16, :order => "created_at DESC"  #order("created_at DESC").paginateall
+    @messages = Message.published.paginate :page => params[:page], :per_page => 16, :order => "created_at DESC"  #order("created_at DESC").paginateall
     render "index", :layout => "messages_list"
   end
 
@@ -39,10 +39,10 @@ class MessagesController < InheritedResources::Base
 
   def verify
     if Message.validate_user(params[:message][:dni])
-    redirect_to new_message_path
+      redirect_to new_message_path
     else
       @message = Message.new(params[:message])
-      flash[:not_found] = "No te encontramos en nuestra base de datos"
+      flash[:not_found] = "Lo sentimos, a&uacute;n no tienes una Cuenta Ganadora."
       render :add
     end
   end
@@ -51,6 +51,7 @@ class MessagesController < InheritedResources::Base
     @message = Message.find(params[:id])
     @message.published = true
     @message.save
+    flash[:published] = "Felicitaciones tu receta se subi&oacute; exitosamente. Ahora espera nuestra confirmaci&oacute;n para invitar a tus amigos a votar."
     redirect_to message_path(@message)
   end
 

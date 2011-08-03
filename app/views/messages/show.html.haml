@@ -1,3 +1,10 @@
+- unless @message.published?
+  %p.description Revisa que tu receta est&eacute; correcta.
+
+- if flash[:published]!=""
+  %p.description
+    = raw flash[:published]
+
 .inner
   #messages_list
     %h3{:class=>recipe_color(@message)}= @message.title
