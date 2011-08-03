@@ -962,7 +962,7 @@ div.whole {
 div.share_zone {
 	padding: 5px 5px;
 	padding-left: 6px;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 	/*background-color: #2c5a91;*/
   background: url(/images/share_background.png?1312332311) repeat-x;
 	font-size: 12px;
@@ -992,9 +992,9 @@ div.share_zone a:hover {
 }
 
 a.facebook_icon {
-	background-image: url(../images/facebook-icon.png?1312257255);
-	height: 16px;
-	width: 16px;
+	background-image: url(../images/facebook-icon.png?1312346852);
+	height: 20px;
+	width: 20px;
 	text-indent: -9999px;
 	display: block;
 	float: left;
@@ -1002,21 +1002,21 @@ a.facebook_icon {
 }
 
 a.facebook_icon:hover {
-	background-image: url(../images/facebook-icon-over.png?1312257255);
+	background-image: url(../images/facebook-icon-over.png?1312346832);
 	
 }
 
 a.twitter_icon {
-	background-image: url(../images/twitter-icon.png?1312257255);
-	height: 16px;
-	width: 16px;
+	background-image: url(../images/twitter-icon.png?1312346869);
+	height: 20px;
+	width: 20px;
 	text-indent: -9999px;
 	display: block;
 	float: left;
 }
 
 a.twitter_icon:hover {
-	background-image: url(../images/twitter-icon-over.png?1312313362);
+	background-image: url(../images/twitter-icon-over.png?1312346861);
 	
 }
 
@@ -1296,8 +1296,4 @@ input#vote_submit.button.disabled {
   display:block;
   background: url(/images/see_all_background.png?1312334158) no-repeat center center;
   padding:25px 0;
-}
-
-.inner .share_zone{
-  padding-bottom: 7px;
 }
