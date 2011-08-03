@@ -126,7 +126,6 @@ div.content_list {
   padding-top: 10px;
 	/*margin-right: 18px;*/
   margin-right:0;
-	border-right: 1px solid #c9c9c9;
 }
 
 div.message_content {
@@ -173,6 +172,7 @@ div.sidebar {
   min-height: 970px;
 	padding-top: 20px;
   padding-left: 18px;
+	border-left: 1px solid #c9c9c9;
   background: url(/images/sidebar_background.png?1312339660) repeat-y;
 }
 div.input {
@@ -349,7 +349,7 @@ div#logo h1 {
 div#logo h1 a {
 	/*float: left;*/
 	width: 220px;
-	height: 28px;
+	height: 20px;
 	display: block;
 	text-indent: -9999px;
 	background: url(../images/logo_bbva.png?1312333355) no-repeat;
@@ -369,17 +369,17 @@ h2#contest_logo {
 }
 h2#contest_logo a {
 	float: left;
-	background-image: url(../images/logo_concurso.png?1312333365);
-	height: 115px;
+	background: url(../images/logo_concurso.png?1312333365) top center;
+	height: 110px;
 	text-indent: -9999px;
 	width: 186px;
-  margin-top:6px;
-  margin-bottom:0;
+  margin-top:9px;
+  margin-bottom:2px;
 	
 }
 
 #contest_logo a {
-	margin-left: 15px;
+	margin-left: 11px;
 	margin-top: 0;
 }
 h2#contest_logo a:hover {
