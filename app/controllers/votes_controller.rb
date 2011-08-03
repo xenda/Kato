@@ -8,7 +8,7 @@ class VotesController < InheritedResources::Base
   def create
     @vote = Vote.new(params[:vote])
     @vote.user = current_user
-    @vote.user ||= User.first
+    @vote.user_id ||= 1
     @message = @vote.message
     if Vote.where(:user_id => @vote.user_id, :message_id => @vote.message_id).all.empty?
       logger.info "Ok"
