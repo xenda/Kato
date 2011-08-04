@@ -687,7 +687,6 @@ function streamPublish(name, caption, link, description, picture){
             display : 'iframe',
             access_token: fb_token
           });
-          console.log(fb_token);
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
 function publishStream(){
