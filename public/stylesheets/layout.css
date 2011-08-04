@@ -1246,10 +1246,10 @@ h1#bbva, h2#contest_logo{
 }
 h2#contest_logo a{
   margin:0;
-  margin-left:20px;
+  margin-left:70px;
   height:140px;
   width:230px;
-  background: url('/images/logo_concurso.png') no-repeat 20px center;
+  background: url('/images/logo_concurso.png') no-repeat right center;
 }
 /*
 #header{
