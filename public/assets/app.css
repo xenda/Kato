@@ -1301,6 +1301,9 @@ input#vote_submit.button.disabled {
 }
 
 .fb_iframe_widget{
-  display: block !important;
+  display: inline-block !important;
   text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 106px !important;
 }
