@@ -27,7 +27,8 @@ Kato::Application.routes.draw do
     post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"
   end
   match "/terms" => "home#terms", :as => "terms"
-  match "/recetas/:id", :to => "messages#show", :via => "post", :as => :facebook_recipe
+  match "/recetas/:id", :to => "messages#show", :via => "post"
+  match "/recetas/:id", :to => "messages#show", :via => "get", :as => :facebook_recipe
   root :to => "home#index"
 
   # The priority is based upon order of creation:
