@@ -826,10 +826,12 @@ div.message {
 	margin-right: 10px;
 	width: 180px;
 	width: 155px;
-	-webkit-box-shadow: 0px 0px 5px 1px #92887c;
+	/*-webkit-box-shadow: 0px 0px 5px 1px #92887c;*/
 	/*#ccd6e3*/
-  -moz-box-shadow: 0px 0px 5px 0px #5c83ae;
-  box-shadow: 0px 0px 5px 0px #92887c;
+
+  /*-moz-box-shadow: 0px 0px 5px 0px #5c83ae;
+  box-shadow: 0px 0px 5px 0px #92887c;*/
+
 	/*background-color: #ccd6e3;*/
 	/*background-color: #eef6fb;*/
 	
