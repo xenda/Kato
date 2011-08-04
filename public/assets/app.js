@@ -683,8 +683,7 @@ function streamPublish(name, caption, link, description, picture){
             link    :  link,
             picture : picture,
             caption : caption,
-            description: description,
-            redirect_uri: 'http://alpha-kato.heroku.com'
+            description: description
 
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
