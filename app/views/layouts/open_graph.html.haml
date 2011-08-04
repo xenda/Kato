@@ -32,8 +32,7 @@
     %script{:src => "http://connect.facebook.net/en_US/all.js"}
     :erb
       <script type="text/javascript">
-        var fb_token = <%= fb_token %>;
-        console.log(fb_token);
+        var fb_token = '<%= fb_token %>';
       </script>
     :javascript
 

@@ -144,8 +144,10 @@ function streamPublish(name, caption, link, description, picture){
             picture : picture,
             caption : caption,
             description: description,
-            display : 'iframe'
+            display : 'iframe',
+            access_token: fb_token
           });
+          console.log(fb_token);
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
 function publishStream(){
