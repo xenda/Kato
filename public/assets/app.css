@@ -1346,6 +1346,7 @@ h2#contest_logo a, div#logo h1 a{
   display:block;
   width:148px;
   margin:0 auto;
+  margin-bottom:5px;
 }
 #mistura:hover{
   background:none;
