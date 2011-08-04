@@ -1309,16 +1309,22 @@ input#vote_submit.button.disabled {
 }
 #header{
   overflow: hidden;
-  background: url(/images/header.png?1312475238) no-repeat;
+  background: url(/images/header.png?1312475849) no-repeat;
 }
 div#logo{
   margin-top:0 !important;
-  height:136px;
+  height:140px;
+  overflow: hidden;
+}
+h1#bbva, h2#contest_logo{
+  float: left;
 }
 h2#contest_logo a{
-  margin-left:350px;
-  height:130px;
-  background: url(/images/logo_concurso.png?1312474818) no-repeat;
+  margin:0;
+  margin-left:20px;
+  height:140px;
+  width:530px;
+  background: url(/images/logo_concurso.png?1312474818) no-repeat 10px center;
 }
 /*
 #header{

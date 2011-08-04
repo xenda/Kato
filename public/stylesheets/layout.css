@@ -1237,12 +1237,18 @@ input#vote_submit.button.disabled {
 }
 div#logo{
   margin-top:0 !important;
-  height:136px;
+  height:140px;
+  overflow: hidden;
+}
+h1#bbva, h2#contest_logo{
+  float: left;
 }
 h2#contest_logo a{
-  margin-left:350px;
-  height:130px;
-  background: url('/images/logo_concurso.png') no-repeat;
+  margin:0;
+  margin-left:20px;
+  height:140px;
+  width:530px;
+  background: url('/images/logo_concurso.png') no-repeat 10px center;
 }
 /*
 #header{
