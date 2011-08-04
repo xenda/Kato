@@ -548,6 +548,7 @@ textarea#message_ingredients.text.optional {
 }
 
 .content_list h1 {
+  margin-top: 10px;
 	margin-bottom: 20px;
 }
 

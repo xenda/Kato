@@ -15,6 +15,11 @@ function openWindow(url, name, width, height){
 
 $(function(){
 
+  $('#contest_logo a').click(function(event){
+    event.preventDefault();
+    window.location = '/';
+  });
+
   $('.disabled').click(function(e){
     e.preventDefault();
   });
