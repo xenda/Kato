@@ -143,9 +143,10 @@ function streamPublish(name, caption, link, description, picture){
             link    :  link,
             picture : picture,
             caption : caption,
-            description: description
-
+            description: description,
+            display : 'iframe'
           });
+          console.log(FB.getSession());
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
 function publishStream(){
