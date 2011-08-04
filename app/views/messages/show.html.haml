@@ -7,7 +7,7 @@
 
 .inner
   #messages_list
-    %h3{:class=>recipe_color(@message)}= @message.title
+    %h3{:class=>recipe_color(@message)}= @message.title.humanize
     .message{:id => "message_#{@message.id}", :title => @message.title}
       .share_zone
         .title

@@ -212,6 +212,7 @@ box-shadow: 0px 0px 10px 0px #becade;
 div.video{
   padding-bottom: 10px;
   border-bottom: solid 1px #C9C9C9;
+	width: 500px;
 }
 
 div.video video,
@@ -420,7 +421,6 @@ p.description {
 	margin-bottom: 25px;
 	font-size: 35px;
 	line-height: 1em;
-	text-transform: capitalize;
 }
 
 h3.color_0 {
