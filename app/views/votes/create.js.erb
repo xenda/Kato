@@ -1,4 +1,4 @@
 <% @message.reload %>
 $('#message_<%= @message.id %> .votes').html('<%= escape_javascript(render(:partial => "/messages/message_data", :object =>@message)) %>');
 
-streamPublish("Concurso Más bueno que el Pan",'<%= @message.title %>','<%= message_url(@message) %>','<%=  @message.content %>','<%= URI.escape(@message.photo.url) %>');
+streamPublish("Concurso Más bueno que el Pan",'<%= @message.title %>','<%= message_url(@message) %>','<%= escape_javascript(@message.content) %>','<%= URI.escape(@message.photo.url) %>');
