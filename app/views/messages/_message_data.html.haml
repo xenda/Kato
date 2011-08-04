@@ -7,4 +7,4 @@
     -if current_user && Vote.where(:user_id => current_user.id, :message_id => message_data.id).all.empty?
       = f.button :submit, "Votar"
     - else
-      = f.button :submit, "Votar", :disabled => true, :class => "disabled"
+      = f.button :submit, "Votar", :class => "disabled"

@@ -15,6 +15,10 @@ function openWindow(url, name, width, height){
 
 $(function(){
 
+  $('.disabled').click(function(e){
+    e.preventDefault();
+  });
+
   $('a.remove_message').live('click', function(event){
     event.preventDefault();
     $(this).parent().remove();
