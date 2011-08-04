@@ -1309,7 +1309,7 @@ input#vote_submit.button.disabled {
 }
 #header{
   overflow: hidden;
-  background: url(/images/header.png?1312475849) no-repeat;
+  background: url(/images/header.png?1312477163) no-repeat;
 }
 div#logo{
   margin-top:0 !important;
@@ -1324,7 +1324,7 @@ h2#contest_logo a{
   margin-left:20px;
   height:140px;
   width:230px;
-  background: url(/images/logo_concurso.png?1312474818) no-repeat 10px center;
+  background: url(/images/logo_concurso.png?1312474818) no-repeat 20px center;
 }
 /*
 #header{
