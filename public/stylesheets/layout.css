@@ -3,7 +3,9 @@
 	http://kato.dev/stylesheets/layout.css
 	http://localhost:3000/stylesheets/layout.css
 */
-
+html{
+  width: 759px;
+}
 body {
 	/*background-image: -webkit-gradient(
     linear,
@@ -17,7 +19,7 @@ background-image: -moz-linear-gradient(
     rgb(43,88,143) 50%,
     rgb(28,49,77) 20%
 );*/
-
+  width: 759px;
 	margin: 0px;
 	/*background: transparent url(../images/background.png) -19px top;*/
   background: #cfd8e6 url(../images/background.png) repeat-x;
