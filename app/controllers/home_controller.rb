@@ -31,6 +31,12 @@ class HomeController < ApplicationController
           # set_flash_message :notice, :signed_in
         end
 
+        @data = fb_auth_client.data
+        logger.info @data["user"].inspect
+        user = @data["user_id"]
+        token = @data["oauth_token"]
+        session["fbtoken"] = token 
+
       else
         # First time user, show "Connect" button here.
         redirect_to user_fb_auth_path

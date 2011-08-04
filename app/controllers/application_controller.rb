@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
       :title   => e.class,
       :message => e.message
     }
-    current_user.try(:destroy)
+    logger.info e.message
+    #current_user.try(:destroy)
     redirect_to root_url
   end
 
