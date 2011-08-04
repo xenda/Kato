@@ -57,8 +57,8 @@ class MessagesController < InheritedResources::Base
 
   def relog_user!
     unless current_user
-        if session["fbtoken"]
-          resource = User.find_by_facebook_token(session["fbtoken"])
+        if cookies.permanent["fbtoken"]
+          resource = User.find_by_facebook_token(cookies.permanent["fbtoken"])
           if resource          
             if User.respond_to?(:serialize_into_cookie)
               resource.remember_me!

@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @message = Message.new
     @messages = Message.published.order("created_at DESC").limit(6).all
     if current_user
-      session["fbtoken"] = current_user.facebook_token if current_user.facebook_token.present?
+      cookies.permanent["fbtoken"] = current_user.facebook_token if current_user.facebook_token.present?
     end
 
     if params[:signed_request]
@@ -38,7 +38,7 @@ class HomeController < ApplicationController
         logger.info @data["user"].inspect
         user = @data["user_id"]
         token = @data["oauth_token"]
-        session["fbtoken"] = token 
+        cookies.permanent["fbtoken"] = token 
 
       else
         # First time user, show "Connect" button here.

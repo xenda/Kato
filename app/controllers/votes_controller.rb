@@ -6,14 +6,14 @@ class VotesController < InheritedResources::Base
   #after_filter :send_to_pusher
 
   def fb_token
-   current_user ? current_user.facebook_token : session["fbtoken"]
+   current_user ? current_user.facebook_token : cookies.permanent["fbtoken"]
   end
 
   def create
     @vote = Vote.new(params[:vote])
     @vote.token = fb_token
     @vote.user = current_user
-    @vote.user_id ||= session["fbtoken"]
+    @vote.user_id ||= cookies.permanent["fbtoken"]
     @vote.user_id ||= User.last
     @message = @vote.message
     if Vote.where(:token => fb_token, :message_id => @vote.message_id).all.empty?
@@ -24,8 +24,8 @@ class VotesController < InheritedResources::Base
 
   def relog_user!
     unless current_user
-        if session["fbtoken"]
-          resource = User.find_by_facebook_token(session["fbtoken"])
+        if cookies.permanent["fbtoken"]
+          resource = User.find_by_facebook_token(cookies.permanent["fbtoken"])
           if resource          
             if User.respond_to?(:serialize_into_cookie)
               resource.remember_me!
