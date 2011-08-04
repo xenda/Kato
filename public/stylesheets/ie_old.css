@@ -1,0 +1,16 @@
+h2#contest_logo a, div#logo h1 a{
+  behavior: url(/stylesheets/iepngfix.htc);
+}
+
+.wrapper{
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#11162e', Direction=145, Strength=2)
+  progid:DXImageTransform.Microsoft.Glow(color='#11162e', Strength='2');
+}
+a.button{
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=145, Strength=2)
+  progid:DXImageTransform.Microsoft.Glow(color='#aaaaaa', Strength='2');
+}
+#messages_list li, ul#most_voted li, div.message{
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#c1c1c1', Direction=145, Strength=2)
+  progid:DXImageTransform.Microsoft.Glow(color='#c1c1c1', Strength='2');
+}

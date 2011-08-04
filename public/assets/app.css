@@ -630,8 +630,8 @@ textarea#message_ingredients.text.optional {
 div.flash {
 	padding: 10px 20px;
 	margin: 20px 0px;
-	border-top: 1px solid #fcb4b3;
-	border-bottom: 1px solid #fcb4b3;
+	border-top: 1px solid #a0b1ce;
+	border-bottom: 1px solid #a0b1ce;
 	font: normal normal 12px Arial, Helvetica, Geneva, sans-serif;
 	background-color: #d8dfeb;
 	padding: 10px 10px;
@@ -1306,4 +1306,13 @@ input#vote_submit.button.disabled {
   margin: 0 !important;
   padding: 0 !important;
   width: 106px !important;
+}
+
+#header{
+  overflow: hidden;
+  background: url('https://dl-web.dropbox.com/get/header.png?w=42ef3d8e') no-repeat;
+}
+
+h2#contest_logo a, div#logo h1 a{
+  background:none;
 }
