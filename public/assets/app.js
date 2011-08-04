@@ -608,9 +608,14 @@ $(function(){
 //   FB.Canvas.setSize();
 // }
 
-$('.icons a').click(function(event){
+$('a.twitter_icon').click(function(event){
   event.preventDefault();
   openWindow($(this).attr('href'), 'social', 550, 300);
+});
+
+$('a.facebook_icon').click(function(event){
+  event.preventDefault();
+  streamPublish('', '', $(this).attr('href'), '', '');
 });
 
 $('li.message.longer').each(function(index,item){
