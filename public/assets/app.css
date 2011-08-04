@@ -369,7 +369,7 @@ h2#contest_logo {
 }
 h2#contest_logo a {
 	float: left;
-	background: url(../images/logo_concurso.png?1312478385) top center;
+	background: url(../images/logo_concurso.png?1312493412) top center;
 	height: 110px;
 	text-indent: -9999px;
 	width: 186px;
@@ -1310,7 +1310,7 @@ input#vote_submit.button.disabled {
 }
 #header{
   overflow: hidden;
-  background: url(/images/header.png?1312478398) no-repeat;
+  background: url(/images/header.png?1312493418) no-repeat;
 }
 div#logo{
   margin-top:0 !important;
@@ -1322,10 +1322,10 @@ h1#bbva, h2#contest_logo{
 }
 h2#contest_logo a{
   margin:0;
-  margin-left:20px;
+  margin-left:70px;
   height:140px;
   width:230px;
-  background: url(/images/logo_concurso.png?1312478385) no-repeat 20px center;
+  background: url(/images/logo_concurso.png?1312493412) no-repeat right center;
 }
 /*
 #header{
