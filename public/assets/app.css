@@ -102,7 +102,7 @@ background-image: -moz-linear-gradient(
 
 .page {
 		/*background: transparent url(../images/bread.png?1312332303) no-repeat -207px 12px;*/
-  background: transparent url(../images/bread.png?1312332303) no-repeat;
+  /*background: transparent url(../images/bread.png?1312332303) no-repeat;*/
 }
 
 /*html {

@@ -26,7 +26,7 @@ background-image: -moz-linear-gradient(
 
 .page {
 		/*background: transparent url(../images/bread.png) no-repeat -207px 12px;*/
-  background: transparent url(../images/bread.png) no-repeat;
+  /*background: transparent url(../images/bread.png) no-repeat;*/
 }
 
 /*html {
