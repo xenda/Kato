@@ -678,11 +678,13 @@ function updateVotesCount(data){
 
 function streamPublish(name, caption, link, description, picture){
     FB.ui({ method  : 'feed',
+            app_id  : 136578643087393
             name    : name,
             link    :  link,
             picture : picture,
             caption : caption,
-            description: description
+            description: description,
+            redirect_uri: 'http://alpha-kato.heroku.com'
 
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
