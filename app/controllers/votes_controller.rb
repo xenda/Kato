@@ -1,6 +1,6 @@
 class VotesController < InheritedResources::Base
 
-  before_filter :authenticate_user!
+  before_filter :relog_user!
 	respond_to :xml, :json, :js
   respond_to :js, :only => :create
   #after_filter :send_to_pusher
