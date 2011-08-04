@@ -1236,7 +1236,7 @@ input#vote_submit.button.disabled {
   overflow: hidden;
   background: url('https://dl-web.dropbox.com/get/header.png?w=42ef3d8e') no-repeat;
 }
-*/
+
 h2#contest_logo a, div#logo h1 a{
-  /*background:none;*/
-}
+  background:none;
+}*/
