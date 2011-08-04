@@ -144,13 +144,10 @@ function streamPublish(name, caption, link, description, picture){
             picture : picture,
             caption : caption,
             description: description,
-            display : 'iframe'
+            display : 'iframe',
+            access_token: fb_token
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
-
-    FB.getLoginStatus(function(response) {
-        console.log(response);
-    });
 }
 function publishStream(){
     streamPublish("Stream Publish", 'Thinkdiff.net is simply awesome.','http://wp.me/pr3EW-sv', ' I just learned how to develop Iframe+Jquery+Ajax base facebook application development using php sdk 3.0. ', 'Checkout the Tutorial');
