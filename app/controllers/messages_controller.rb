@@ -1,6 +1,6 @@
 class MessagesController < InheritedResources::Base
 
-  before_filter :relog_user!
+  #before_filter :relog_user!
   #after_filter :send_to_pusher, :only => :create
   before_filter :load_most_voted
 

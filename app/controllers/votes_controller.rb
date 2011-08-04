@@ -1,17 +1,22 @@
 class VotesController < InheritedResources::Base
 
-  before_filter :relog_user!
+  #before_filter :relog_user!
 	respond_to :xml, :json, :js
   respond_to :js, :only => :create
   #after_filter :send_to_pusher
 
+  def fb_token
+   current_user ? current_user.facebook_token : session["fbtoken"]
+  end
+
   def create
     @vote = Vote.new(params[:vote])
+    @vote.token = fb_token
     @vote.user = current_user
     @vote.user_id ||= session["fbtoken"]
     @vote.user_id ||= User.last
     @message = @vote.message
-    if Vote.where(:user_id => @vote.user_id, :message_id => @vote.message_id).all.empty?
+    if Vote.where(:token => fb_token, :message_id => @vote.message_id).all.empty?
       logger.info "Ok"
       create!
     end

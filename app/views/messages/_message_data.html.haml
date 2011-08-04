@@ -4,7 +4,7 @@
   / - @current_user = User.first
   = simple_form_for Vote.new(:message_id => message_data.id), :remote => true do |f|
     = f.input :message_id, :as => :hidden
-    -if current_user && Vote.where(:user_id => current_user.id, :message_id => message_data.id).all.empty?
+    -if current_user && Vote.where(:token => fb_token, :message_id => message_data.id).all.empty?
       = f.button :submit, "Votar"
     - else
       = f.button :submit, "Votar", :class => "disabled"
