@@ -18,6 +18,8 @@
             .content_list
               = yield
             .sidebar
+              %a{:href => 'http://www.mistura.pe/', :id => 'mistura'}
+                %img{:src => 'http://www.mistura.pe/sites/default/files/mistura_logo.png'}
               %h3 Las más votadas
               %ul#most_voted
                 = render :partial => "messages/message", :collection => @most_voted, :as => :message

@@ -1265,3 +1265,9 @@ h2#contest_logo a, div#logo h1 a{
   background: none;
 }
 
+
+#mistura{
+  display:block;
+  width:148px;
+  margin:0 auto;
+}
