@@ -369,7 +369,7 @@ h2#contest_logo {
 }
 h2#contest_logo a {
 	float: left;
-	background: url(../images/logo_concurso.png?1312333365) top center;
+	background: url(../images/logo_concurso.png?1312474818) top center;
 	height: 110px;
 	text-indent: -9999px;
 	width: 186px;
@@ -1309,7 +1309,7 @@ input#vote_submit.button.disabled {
 }
 #header{
   overflow: hidden;
-  background: url('https://dl-web.dropbox.com/get/header.png?w=42ef3d8e') no-repeat;
+  background: url(/images/header.png?1312474805) no-repeat;
 }
 div#logo{
   margin-top:0 !important;
@@ -1318,7 +1318,7 @@ div#logo{
 h2#contest_logo a{
   margin-left:250px;
   height:130px;
-  background: url('https://dl-web.dropbox.com/get/logo_concurso.png?w=b9100ea8') no-repeat;
+  background: url(/images/logo_concurso.png?1312474818) no-repeat;
 }
 /*
 #header{
