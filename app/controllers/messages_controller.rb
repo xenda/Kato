@@ -1,6 +1,6 @@
 class MessagesController < InheritedResources::Base
 
-  # before_filter :authenticate_user!
+  before_filter :authenticate_user!
   #after_filter :send_to_pusher, :only => :create
   before_filter :load_most_voted
 
