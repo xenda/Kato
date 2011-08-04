@@ -1307,6 +1307,19 @@ input#vote_submit.button.disabled {
   padding: 0 !important;
   width: 106px !important;
 }
+#header{
+  overflow: hidden;
+  background: url('https://dl-web.dropbox.com/get/header.png?w=42ef3d8e') no-repeat;
+}
+div#logo{
+  margin-top:0 !important;
+  height:136px;
+}
+h2#contest_logo a{
+  margin-left:250px;
+  height:130px;
+  background: url('https://dl-web.dropbox.com/get/logo_concurso.png?w=b9100ea8') no-repeat;
+}
 /*
 #header{
   overflow: hidden;
