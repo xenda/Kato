@@ -136,7 +136,7 @@ function updateVotesCount(data){
   $("#message_" + data['message_id']).effect("shake", { distance: 3, times: 5}, 100).effect("highlight", {}, 1000);
 }
 
-function streamPublish(name, caption, link, description,picture){
+function streamPublish(name, caption, link, description, picture){
     FB.ui({ method  : 'feed',
             name    : name,
             link    :  link,

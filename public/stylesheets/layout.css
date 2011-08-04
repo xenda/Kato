@@ -1260,3 +1260,8 @@ h2#contest_logo a{
 h2#contest_logo a, div#logo h1 a{
   background:none;
 }*/
+
+#footer a.terms_button:hover{
+  background: none;
+}
+
