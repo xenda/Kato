@@ -50,4 +50,4 @@
   %h3.comments Deja tus comentarios
   #fb-root{:style => "display:block;clear:both"}
   %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-  %fb:comments{:href => message_url(@message), :num_posts => "10", :width => "500"}
+  %fb:comments{:href => facebook_recipe_url(@message), :num_posts => "10", :width => "500"}

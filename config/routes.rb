@@ -29,6 +29,7 @@ Kato::Application.routes.draw do
   match "/terms" => "home#terms", :as => "terms"
   match "/recetas/:id", :to => "messages#show", :via => "post"
   match "/recetas/:id", :to => "messages#show", :via => "get", :as => :facebook_recipe
+  match "/recetas", :to => "messages#index", :via => "get", :as => :facebook_recipes
   root :to => "home#index"
 
   # The priority is based upon order of creation:
