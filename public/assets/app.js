@@ -697,10 +697,8 @@ function streamPublish(name, caption, link, description, picture){
             display : 'iframe',
             access_token: fb_token
           }, function(response){
-            if(response){
-              $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
-              alert($('.fb_dialog .fb_dialog_advanced .loading').html());
-            }
+            $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
+            alert($('.fb_dialog .fb_dialog_advanced .loading').html());
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
