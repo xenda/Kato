@@ -40,10 +40,6 @@ function openWindow2(url, name, width, height){
 
 $(function(){
 
-  window.setTimeout(function() {
-    $('.fb_dialog').css({'top':'82.5px', 'left':'116.5px'});
-  }, 500);
-
   $('.title a, .photo_zone a, #footer a.terms_button, #new_message_button, .additional a').click(function(event){
     event.preventDefault();
 
@@ -135,10 +131,7 @@ $('a.facebook_icon').click(function(event){
     'type': 'iframe',
     'width': 560,
     'height': 300,
-    'padding' : 0,
-    'onComplete': function(){
-      console.log('completed');
-    }
+    'padding' : 0
   });
   // streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').find('a').attr('rel'), $(this).attr('href'), '', '');
 });
