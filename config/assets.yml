@@ -8,10 +8,6 @@ javascripts:
     - public/javascripts/jquery_ui.custom.min.js
     - public/javascripts/jquery.oembed.min.js
     - public/javascripts/jquery.tipsy.js
-  fancybox:
-    - public/javascripts/fancybox/jquery.easing-1.3.pack.js
-    - public/javascripts/fancybox/jquery.mousewheel-3.0.4.pack.js
-    - public/javascripts/fancybox/jquery.fancybox-1.3.4.pack.js
   app:
     - public/javascripts/application.js
 stylesheets:
