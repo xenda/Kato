@@ -1253,15 +1253,6 @@ h2#contest_logo a{
   width:230px;
   background: url('/images/logo_concurso.png') no-repeat right center;
 }
-/*
-#header{
-  overflow: hidden;
-  background: url('https://dl-web.dropbox.com/get/header.png?w=42ef3d8e') no-repeat;
-}
-
-h2#contest_logo a, div#logo h1 a{
-  background:none;
-}*/
 
 #footer a.terms_button:hover{
   background: none;
@@ -1276,11 +1267,4 @@ h2#contest_logo a, div#logo h1 a{
 }
 #mistura:hover{
   background:none;
-}
-
-
-.fb_dialog{
-  z-index:100000001;
-  top: 82.5px !important;
-  left: 116.5px !important;
 }

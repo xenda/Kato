@@ -642,21 +642,22 @@ $('li.message').mouseenter(function(){
 //$("li.message").tipsy({gravity: 's', fade:true});
 
   // Enable pusher logging - don't include this in production
-  Pusher.log = function(message) {
-    if (window.console && window.console.log) window.console.log(message);
-  };
 
-  // Flash fallback logging - don't include this in production
-  WEB_SOCKET_DEBUG = true;
+  // Pusher.log = function(message) {
+  //   if (window.console && window.console.log) window.console.log(message);
+  // };
 
-  var pusher = new Pusher('e5e83dab1c59e257be10');
-  var channel = pusher.subscribe('alpha-skunk');
-  channel.bind('message:create', function(data) {
-    addNewMessage(data);
-  });
-  channel.bind('vote:create', function(data) {
-    updateVotesCount(data);
-  });
+  // // Flash fallback logging - don't include this in production
+  // WEB_SOCKET_DEBUG = true;
+
+  // var pusher = new Pusher('e5e83dab1c59e257be10');
+  // var channel = pusher.subscribe('alpha-skunk');
+  // channel.bind('message:create', function(data) {
+  //   addNewMessage(data);
+  // });
+  // channel.bind('vote:create', function(data) {
+  //   updateVotesCount(data);
+  // });
 
 });
 
@@ -695,7 +696,6 @@ function streamPublish(name, caption, link, description, picture){
             access_token: fb_token
           }, function(response){
             $(window).scrollTop(scroll);
-            $('.fb_dialog').first().remove();
             console.log($('.fb_dialog'));
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
