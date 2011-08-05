@@ -22,6 +22,21 @@ function openWindow(url, name, width, height){
   */
 }
 
+function openWindow2(url, name, width, height){
+
+  centerWidth = (window.screen.width - width)/2;
+  centerHeight = (window.screen.height - height)/2;
+
+  newWindow = window.open(url, name, 'resize=no,toolbar=no,width=' + width +
+    ',height=' + height +
+    ',left=' + centerWidth +
+    ',top=' + centerHeight);
+
+  newWindow.focus();
+  return newWindow.name;
+
+}
+
 $(function(){
 
   window.setTimeout(function() {
@@ -107,14 +122,7 @@ $(function(){
 
 $('a.twitter_icon').click(function(event){
   event.preventDefault();
-  console.log($(this).attr('href'));
-  $.fancybox({
-    'href': $(this).attr('href'),
-    'type': 'iframe',
-    'width': 550,
-    'height': 300,
-    'padding' : 0
-  });
+  openWindow2($(this).attr('href'), 'share_twitter', 550, 300);
 });
 
 $('a.facebook_icon').click(function(event){
