@@ -26,7 +26,7 @@
               = yield
         #footer
           = link_to "Términos y condiciones del concurso", "http://apps.facebook.com/masbuenoqueelpan#{terms_path}", :class => "terms_button"
-    %script{:src => "https://connect.facebook.net/en_US/all.js"}
+    %script{:src => "http://connect.facebook.net/en_US/all.js"}
     :erb
       <script type="text/javascript">
         var fb_token = '<%= fb_token %>';
@@ -39,7 +39,8 @@
         appId : '136578643087393',
         status : true, // check login status
         cookie : true, // enable cookies to allow the server to access the session
-        xfbml : true // parse XFBML
+        xfbml : true,
+        oauth: true // parse XFBML
         });
 
         window.setTimeout(function() {
