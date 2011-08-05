@@ -3,7 +3,7 @@
     .title
       = link_to truncate(message.title, :length => 15), message, :title => message.title
     .icons
-      = link_to "Facebook", facebook_recipe_url(message), :class => "facebook_icon"
+      = link_to "Facebook", "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(message)}", :class => "facebook_icon"
       = link_to "Twitter", "http://twitter.com/share?url=#{URI.escape(message_url(message))}", :class => "twitter_icon"
   .photo_zone
     = link_to facebook_recipe_path(message) do
