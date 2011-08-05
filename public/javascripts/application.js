@@ -76,6 +76,7 @@ $('a.twitter_icon').click(function(event){
 $('a.facebook_icon').click(function(event){
   event.preventDefault();
   streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').attr('rel'), $(this).attr('href'), '', '');
+  console.log($('.fb_dialog').html());
 });
 
 $('li.message.longer').each(function(index,item){
