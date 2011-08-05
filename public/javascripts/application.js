@@ -172,17 +172,23 @@ function updateVotesCount(data){
 }
 var scroll = $(window).scrollTop();
 function streamPublish(name, caption, link, description, picture){
-    FB.ui({ method  : 'feed',
-            app_id  : 136578643087393,
-            name    : name,
-            link    :  link,
-            picture : picture,
-            caption : caption,
-            description: description,
-            display : 'iframe',
-            access_token: fb_token
-          });
-        //http://developers.facebook.com/docs/reference/dialogs/feed/
+
+              FB.ui({ method  : 'feed',
+                    app_id  : 136578643087393,
+                    name    : name,
+                    link    :  link,
+                    picture : picture,
+                    caption : caption,
+                    description: description,
+                    display : 'iframe',
+                    access_token: fb_token
+                  }, function(response){
+                    $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
+                    // alert($('.fb_dialog .fb_dialog_advanced .loading').html());
+                  });
+                //http://developers.facebook.com/docs/reference/dialogs/feed/
+
+
 }
 function publishStream(){
     streamPublish("Stream Publish", 'Thinkdiff.net is simply awesome.','http://wp.me/pr3EW-sv', ' I just learned how to develop Iframe+Jquery+Ajax base facebook application development using php sdk 3.0. ', 'Checkout the Tutorial');

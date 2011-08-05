@@ -31,7 +31,7 @@
                 = link_to "Ver todos", "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipes_path}", :class=> "button"
         #footer
           = link_to "Términos y condiciones del concurso", "http://apps.facebook.com/masbuenoqueelpan#{terms_path}", :class => "terms_button"
-    %script{:src => "http://connect.facebook.net/en_US/all.js"}
+    %script{:src => "https://connect.facebook.net/en_US/all.js"}
     :erb
       <script type="text/javascript">
         var fb_token = '<%= fb_token %>';
@@ -44,22 +44,7 @@
         appId : '136578643087393',
         status : true, // check login status
         cookie : true, // enable cookies to allow the server to access the session
-        xfbml : true, // parse XFBML
-        oauth : true
-        });
-
-        FB.getLoginStatus(function(response) {
-         if (response.session) {
-           // console.log('got session, ok to post');
-         } else {
-        FB.login(function(response) {
-          if (response.session) {
-            // console.log('user logged in');
-          } else {
-            // console.log('canceled login');
-          }
-        });
-          }
+        xfbml : true // parse XFBML
         });
 
         window.setTimeout(function() {
