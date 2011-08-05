@@ -1275,3 +1275,7 @@ h2#contest_logo a{
 #mistura:hover{
   background:none;
 }
+
+#fancybox-content{
+  background: url('/images/loading.gif') no-repeat center center;
+}

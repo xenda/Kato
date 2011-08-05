@@ -1351,6 +1351,10 @@ h2#contest_logo a{
 #mistura:hover{
   background:none;
 }
+
+#fancybox-content{
+  background: url(/images/loading.gif?1312566083) no-repeat center center;
+}
 /*
  * FancyBox - jQuery Plugin
  * Simple and fancy lightbox alternative

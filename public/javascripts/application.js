@@ -135,8 +135,7 @@ $('a.facebook_icon').click(function(event){
     'type': 'iframe',
     'width': 560,
     'height': 300,
-    'padding' : 0,
-    'onStart': function(){}
+    'padding' : 0
   });
   // streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').find('a').attr('rel'), $(this).attr('href'), '', '');
 });
