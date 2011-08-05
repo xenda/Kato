@@ -149,11 +149,6 @@ function updateVotesCount(data){
 var scroll = $(window).scrollTop();
 function streamPublish(name, caption, link, description, picture){
 
-        FB.getLoginStatus(function(response) {
-         if (response.session) {
-           // console.log('got session, ok to post');
-           // alert("Sesion válida")
-
               FB.ui({ method  : 'feed',
                     app_id  : 136578643087393,
                     name    : name,
@@ -168,35 +163,6 @@ function streamPublish(name, caption, link, description, picture){
                     alert($('.fb_dialog .fb_dialog_advanced .loading').html());
                   });
                 //http://developers.facebook.com/docs/reference/dialogs/feed/
-
-
-
-         } else {
-        FB.login(function(response) {
-          if (response.session) {
-            alert("Inicio de sesion")
-
-              FB.ui({ method  : 'feed',
-                    app_id  : 136578643087393,
-                    name    : name,
-                    link    :  link,
-                    picture : picture,
-                    caption : caption,
-                    description: description,
-                    display : 'iframe',
-                    access_token: fb_token
-                  }, function(response){
-                    $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
-                    alert($('.fb_dialog .fb_dialog_advanced .loading').html());
-                  });
-
-
-          } else {
-            alert("Cancelacion de sesion")
-          }
-        });
-          }
-        });
 
 
 }
