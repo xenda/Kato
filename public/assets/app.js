@@ -615,7 +615,7 @@ $('a.twitter_icon').click(function(event){
 
 $('a.facebook_icon').click(function(event){
   event.preventDefault();
-  streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').text(), $(this).attr('href'), '', '');
+  streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').attr('rel'), $(this).attr('href'), '', '');
 });
 
 $('li.message.longer').each(function(index,item){
