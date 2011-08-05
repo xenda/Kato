@@ -12,7 +12,7 @@
       .share_zone
         .title
         .icons
-          = link_to "Facebook", "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(@message)}", :class => "
+          = link_to "Facebook", "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(@message)}", :class => "facebook_icon"
           = link_to "Twitter", "http://twitter.com/share?url=#{URI.escape(message_url(@message))}", :class => "twitter_icon"
       .photo_zone
         = link_to @message do
