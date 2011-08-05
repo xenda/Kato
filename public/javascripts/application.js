@@ -15,6 +15,10 @@ function openWindow(url, name, width, height){
 
 $(function(){
 
+  window.setTimeout(function() {
+    $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
+  }, 250);
+
   $('#contest_logo a').click(function(event){
     event.preventDefault();
     window.location = '/';
@@ -153,8 +157,10 @@ function streamPublish(name, caption, link, description, picture){
             display : 'iframe',
             access_token: fb_token
           }, function(response){
-            if(response)
+            if(response){
               $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
+              alert($('.fb_dialog .fb_dialog_advanced .loading').html());
+            }
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
