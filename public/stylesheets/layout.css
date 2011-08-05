@@ -1279,3 +1279,7 @@ h2#contest_logo a{
 #fancybox-content{
   background: url('/images/loading.gif') no-repeat center center;
 }
+
+form#new_message{
+  margin-top:10px;
+}

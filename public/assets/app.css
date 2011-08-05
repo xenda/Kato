@@ -1355,6 +1355,10 @@ h2#contest_logo a{
 #fancybox-content{
   background: url(/images/loading.gif?1312566083) no-repeat center center;
 }
+
+form#new_message{
+  margin-top:10px;
+}
 /*
  * FancyBox - jQuery Plugin
  * Simple and fancy lightbox alternative
