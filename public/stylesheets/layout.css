@@ -5,7 +5,6 @@
 */
 html{
   width: 759px;
-  overflow:hidden;
 }
 body {
 	/*background-image: -webkit-gradient(
@@ -25,7 +24,6 @@ background-image: -moz-linear-gradient(
 	/*background: transparent url(../images/background.png) -19px top;*/
   background: #cfd8e6 url(../images/background.png) repeat-x;
 	padding: 0px;
-  overflow:hidden;
 }
 
 .page {
