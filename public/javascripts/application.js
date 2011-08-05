@@ -67,10 +67,12 @@ $(function(){
     }
   });
 
-  $('#contest_logo a').click(function(event){
+  $('#contest_logo a, #back_to_home').click(function(event){
     event.preventDefault();
     window.location = '/';
   });
+
+
 
   $('.disabled').click(function(e){
     e.preventDefault();
