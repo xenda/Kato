@@ -1281,6 +1281,6 @@ h2#contest_logo a, div#logo h1 a{
 
 .fb_dialog{
   z-index:100000001;
-  top: 82.5 !important;
-  left: 116.5 !important;
+  top: 82.5px !important;
+  left: 116.5px !important;
 }
