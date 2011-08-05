@@ -113,7 +113,7 @@ $('a.twitter_icon').click(function(event){
 $('a.facebook_icon').click(function(event){
   event.preventDefault();
   $.fancybox({
-    'href': 'https://www.facebook.com/dialog/feed?link='+$(this).attr('href')+'&name='+$(this).parent().parent().find('.title').find('a').attr('rel')+'&caption=Concurso Más bueno que el Pan&display=iframe&redirect_uri=http://alpha-kato.heroku.com/facebook?access_token='+fb_token+'&app_id=136578643087393',
+    'href': 'https://www.facebook.com/dialog/feed?link='+$(this).attr('href')+'&name='+$(this).parent().parent().find('.title').find('a').attr('rel')+'&caption=Concurso Más bueno que el Pan&display=iframe&redirect_uri=http://alpha-kato.heroku.com/facebook&access_token='+fb_token+'&app_id=136578643087393',
     'type': 'iframe',
     'width': 560,
     'height': 300,
