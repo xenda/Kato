@@ -1,6 +1,13 @@
 Cufon.replace('h1,h2,h3'); // Works without a selector engine
 
 function openWindow(url, name, width, height){
+  $.fancybox({
+    'href': url,
+    'type': 'iframe',
+    'width': width,
+    'height': height
+  });
+  /*
 	centerWidth = (window.screen.width - width)/2;
 	centerHeight = (window.screen.height - height)/2;
 
@@ -11,6 +18,7 @@ function openWindow(url, name, width, height){
 
 	newWindow.focus();
 	return newWindow.name;
+  */
 }
 
 $(function(){
@@ -19,7 +27,7 @@ $(function(){
     $('.fb_dialog').css({'top':'82.5px', 'left':'116.5px'});
   }, 500);
 
-  $('.photo_zone a, #footer a.terms_button, #new_message_button, .additional a').click(function(event){
+  $('.title a, .photo_zone a, #footer a.terms_button, #new_message_button, .additional a').click(function(event){
     event.preventDefault();
 
     var href = $(this).attr('href');
@@ -103,8 +111,13 @@ $('a.twitter_icon').click(function(event){
 
 $('a.facebook_icon').click(function(event){
   event.preventDefault();
-  streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').find('a').attr('rel'), $(this).attr('href'), '', '');
-
+  $.fancybox({
+    'href': 'https://www.facebook.com/dialog/feed?link='+$(this).attr('href')+'&name='+$(this).parent().parent().find('.title').find('a').attr('rel')+'&caption=Concurso Más bueno que el Pan&description=&display=iframe&redirect_uri=http://alpha-kato.heroku.com&access_token='+fb_token+'&app_id=136578643087393',
+    'type': 'iframe',
+    'width': 560,
+    'height': 300
+  });
+  //streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').find('a').attr('rel'), $(this).attr('href'), '', '');
 });
 
 $('li.message.longer').each(function(index,item){
