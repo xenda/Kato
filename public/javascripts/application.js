@@ -186,6 +186,8 @@ function updateVotesCount(data){
 var scroll = $(window).scrollTop();
 function streamPublish(name, caption, link, description, picture){
 
+
+
               FB.ui({ method  : 'feed',
                     app_id  : 136578643087393,
                     name    : name,
