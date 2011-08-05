@@ -16,8 +16,8 @@ function openWindow(url, name, width, height){
 $(function(){
 
   window.setTimeout(function() {
-    $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
-  }, 250);
+    $('.fb_dialog').css({'top':'82.5px', 'left':'116.5px'});
+  }, 500);
 
   $('#contest_logo a').click(function(event){
     event.preventDefault();
@@ -197,10 +197,6 @@ function streamPublish(name, caption, link, description, picture){
         });
           }
         });
-
-
-
-
 
 
 }
