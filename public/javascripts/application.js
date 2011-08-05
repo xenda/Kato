@@ -1,4 +1,4 @@
-Cufon.replace('h1,h2,h3'); // Works without a selector engine
+Cufon.replace('h1,h2,h3,p.published'); // Works without a selector engine
 
 function openWindow(url, name, width, height){
   $.fancybox({

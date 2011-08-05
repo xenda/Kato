@@ -1078,7 +1078,7 @@ div.how_to {
 
 .ingredients p,
 div.ingredients .content li,
-.how_to p {
+.how_to p, p.published {
 	/*margin-left: 35px;*/
 	font-size: 12px;
 	line-height: 1.6em;

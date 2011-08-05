@@ -42,8 +42,10 @@
       .content
         = simple_format @message.content
 
-  - if @user
-    %p Publicado por #{@user.name}
+    - if @user
+      %p.published
+        Publicado por
+        %strong #{@user.name.titleize}
 
   - unless @message.published?
     .message_actions
