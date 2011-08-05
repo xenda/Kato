@@ -53,4 +53,8 @@ class HomeController < ApplicationController
 
   end
 
+  def facebook
+    render :layout => 'facebook'
+  end
+
 end

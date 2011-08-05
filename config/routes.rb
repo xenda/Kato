@@ -27,6 +27,7 @@ Kato::Application.routes.draw do
     post 'users/fb_callback(.:format)' => "devise/facebook_consumer#callback"
   end
   match "/terms" => "home#terms", :as => "terms"
+  match "/facebook" => "home#facebook"
   match "/terminos_y_condiciones" => "home#terms", :as => "terms", :via => "post"
   match "/recetas/:id", :to => "messages#show", :via => "post"
   match "/recetas/:id", :to => "messages#show", :via => "get", :as => :facebook_recipe
