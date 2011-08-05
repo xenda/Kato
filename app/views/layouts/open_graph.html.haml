@@ -11,6 +11,7 @@
     %meta{:content => @message.content, :property => "og:description"}/
     %meta{:content => @message.photo.url(:thumb), :property => "og:image"}/
     %meta{:content => "Concurso Más Bueno Que El Pan", :property => "og:site"}/
+    %meta{:content => "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(@message.id)}", :property => "og:url"}/
 
   %body
     .page
