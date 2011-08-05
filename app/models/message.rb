@@ -30,6 +30,12 @@ class Message < ActiveRecord::Base
     # false
   end
 
+  def twitter_link
+    link = "http://twitter.com/share?url="
+    link << URI.escape("http://apps.facebook.com/masbuenoqueelpan/recipe/#{self.id}")
+    link
+  end
+
   def photo_url
     if photo_file_name
       photo.url(:big)
