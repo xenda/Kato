@@ -47,6 +47,21 @@
         }, 250);
       };
 
+        FB.getLoginStatus(function(response) {
+         if (response.session) {
+           // console.log('got session, ok to post');
+         } else {
+        FB.login(function(response) {
+          if (response.session) {
+            // console.log('user logged in');
+          } else {
+            // console.log('canceled login');
+          }
+        });
+          }
+        });
+
+
       (function() {
         var e = document.createElement('script'); e.async = true;
         e.src = document.location.protocol +
