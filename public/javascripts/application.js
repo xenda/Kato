@@ -6,7 +6,8 @@ function openWindow(url, name, width, height){
     'type': 'iframe',
     'width': width,
     'height': height,
-    'padding' : 0
+    'padding' : 0,
+    'onStart': function(){}
   });
   /*
 	centerWidth = (window.screen.width - width)/2;
@@ -134,7 +135,8 @@ $('a.facebook_icon').click(function(event){
     'type': 'iframe',
     'width': 560,
     'height': 300,
-    'padding' : 0
+    'padding' : 0,
+    'onStart': function(){}
   });
   // streamPublish('Concurso Más bueno que el Pan', $(this).parent().parent().find('.title').find('a').attr('rel'), $(this).attr('href'), '', '');
 });

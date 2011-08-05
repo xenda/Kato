@@ -11,7 +11,7 @@
         = image_tag message.photo.url(:thumb), :title => message.title, :alt => message.title
       - else
         = image_tag "default.jpg"
-    - if message.user
+    - if message.user && !User::NINJAS.include?(message.user.facebook_uid)
       %img.author_picture{:src => "http://graph.facebook.com/#{message.user.facebook_uid}/picture", :title => message.user.name.titleize, :width => 32, :height => 32}
   .meta_data
     .avatar
