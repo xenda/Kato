@@ -32,7 +32,7 @@ class Message < ActiveRecord::Base
 
   def twitter_link
     link = "http://twitter.com/share?url="
-    link << URI.escape("http://apps.facebook.com/masbuenoqueelpan/recipe/#{self.id}")
+    link << URI.escape("http://apps.facebook.com/masbuenoqueelpan/recetas/#{self.id}")
     link
   end
 
