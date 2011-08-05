@@ -8,6 +8,10 @@
 .inner
   #messages_list
     %h3{:class=>recipe_color(@message)}= @message.title.humanize
+    - if @user
+      %p.published
+        Publicado por
+        %strong #{@user.name.titleize}
     .message{:id => "message_#{@message.id}", :title => @message.title}
       .share_zone
         .title
@@ -41,11 +45,6 @@
       %h3 Preparación
       .content
         = simple_format @message.content
-
-    - if @user
-      %p.published
-        Publicado por
-        %strong #{@user.name.titleize}
 
   - unless @message.published?
     .message_actions
