@@ -42,6 +42,9 @@
       .content
         = simple_format @message.content
 
+  - if @user
+    %p Publicado por #{@user.name}
+
   - unless @message.published?
     .message_actions
       %a.button{:href => publish_message_path(@message)} Mandar

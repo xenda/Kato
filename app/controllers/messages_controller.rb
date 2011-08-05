@@ -57,6 +57,8 @@ class MessagesController < InheritedResources::Base
 
   def create
     create! {
+      @message.token = fb_token
+      @message.save
       @message.ingredients.each do |ingredient|
         ingredient.message = @message
         ingredient.save
@@ -73,6 +75,7 @@ class MessagesController < InheritedResources::Base
 
   def show
     @message = Message.find(params[:id])
+    @user = User.where(:facebook_token => @message.token.to_s).first
     render :show, :layout => "open_graph"
   end
 
@@ -129,6 +132,10 @@ class MessagesController < InheritedResources::Base
   end
 
   private
+
+  def fb_token
+   current_user ? current_user.facebook_token : cookies.permanent["fbtoken"]
+  end
 
   def load_most_voted
     @most_voted = Message.most_voted.all
