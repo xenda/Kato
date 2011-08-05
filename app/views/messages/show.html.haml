@@ -15,7 +15,7 @@
           = link_to "Facebook", "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(@message)}", :class => "facebook_icon"
           = link_to "Twitter", "http://twitter.com/share?url=#{URI.escape(message_url(@message))}", :class => "twitter_icon"
       .photo_zone
-        = link_to @message do
+        = link_to "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(@message)}" do
           - if @message.photo_file_name
             = image_tag @message.photo.url(:big)
           - else
@@ -50,4 +50,4 @@
   %h3.comments Deja tus comentarios
   #fb-root{:style => "display:block;clear:both"}
   %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-  %fb:comments{:href => facebook_recipe_url(@message), :num_posts => "10", :width => "500"}
+  %fb:comments{:href => "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(@message)}", :num_posts => "10", :width => "500"}
