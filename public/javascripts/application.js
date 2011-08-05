@@ -173,6 +173,9 @@ function updateVotesCount(data){
 var scroll = $(window).scrollTop();
 function streamPublish(name, caption, link, description, picture){
 
+// ,
+//                     access_token: fb_token
+
               FB.ui({ method  : 'feed',
                     app_id  : 136578643087393,
                     name    : name,
@@ -180,8 +183,7 @@ function streamPublish(name, caption, link, description, picture){
                     picture : picture,
                     caption : caption,
                     description: description,
-                    display : 'iframe',
-                    access_token: fb_token
+                    display : 'iframe'
                   }, function(response){
                     $('.fb_dialog .fb_dialog_advanced .loading').css({'top':'82.5px', 'left':'116.5px'});
                     // alert($('.fb_dialog .fb_dialog_advanced .loading').html());
