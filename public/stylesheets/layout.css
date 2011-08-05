@@ -1202,9 +1202,9 @@ div.info a:hover {
 	background-color: transparent;
 }
 
-input#vote_submit.button.disabled {
+input#vote_submit.button.disabled, input.disabled {
+  background: none;
 	background-color: #a2a2a2 !important;
-	background: none;
 	  box-shadow: inset 0 1px 1px #c1c1c1;
     -moz-box-shadow: inset 0 1px 4px #c1c1c1;
     -webkit-box-shadow: inset 1 1px 1px #c1c1c1;
