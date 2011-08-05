@@ -12,7 +12,7 @@
       - else
         = image_tag "default.jpg"
     - if message.user
-      %img.author_picture{:src => "http://graph.facebook.com/#{message.user.facebook_uid}/picture", :width => 32, :height => 32}
+      %img.author_picture{:src => "http://graph.facebook.com/#{message.user.facebook_uid}/picture", :title => message.user.name.titleize, :width => 32, :height => 32}
   .meta_data
     .avatar
     .votes
