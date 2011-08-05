@@ -19,6 +19,30 @@ $(function(){
     $('.fb_dialog').css({'top':'82.5px', 'left':'116.5px'});
   }, 500);
 
+  $('.photo_zone a, #footer a.terms_button, #new_message_button, .additional a').click(function(event){
+    event.preventDefault();
+
+    var href = $(this).attr('href');
+    if(href.search('^http://apps.facebook.com/masbuenoqueelpan/')==0){
+      href = href.replace('http://apps.facebook.com/masbuenoqueelpan/', '');
+      var routes = href.split('/');
+      switch(routes[0]){
+        case 'terminos_y_condiciones':
+          window.location = '/terms';
+        break;
+        case 'nueva_receta':
+          window.location = '/messages/add';
+        break;
+        case 'recetas':
+          if(routes.length>1)
+            window.location = '/messages/'+routes[1];
+          else
+            window.location = '/messages';
+        break;
+      }
+    }
+  });
+
   $('#contest_logo a').click(function(event){
     event.preventDefault();
     window.location = '/';
