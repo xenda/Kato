@@ -8,7 +8,7 @@
   .photo_zone
     = link_to "http://apps.facebook.com/masbuenoqueelpan#{facebook_recipe_path(message)}" do
       - if message.photo_file_name
-        = image_tag message.photo.url(:thumb)
+        = image_tag message.photo.url(:thumb), :title => message.title, :alt => message.title
       - else
         = image_tag "default.jpg"
   .meta_data
