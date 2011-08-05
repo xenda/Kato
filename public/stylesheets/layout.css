@@ -1277,3 +1277,10 @@ h2#contest_logo a, div#logo h1 a{
 #mistura:hover{
   background:none;
 }
+
+
+.fb_dialog{
+  z-index:100000001;
+  top: 82.5 !important;
+  left: 116.5 !important;
+}
