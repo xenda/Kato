@@ -695,7 +695,7 @@ function streamPublish(name, caption, link, description, picture){
             display : 'iframe',
             access_token: fb_token
           }, function(response){
-            $(window).scrollTop(scroll);
+            $('.fb_dialog').css({'top':'82.5px', 'left':'116.5px'});
             console.log($('.fb_dialog'));
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
