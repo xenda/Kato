@@ -44,8 +44,21 @@
         appId : '136578643087393',
         status : true, // check login status
         cookie : true, // enable cookies to allow the server to access the session
-        xfbml : true, // parse XFBML
-        oauth : true // enables OAuth 2.0
+        xfbml : true // parse XFBML
+        });
+
+        FB.getLoginStatus(function(response) {
+         if (response.session) {
+           // console.log('got session, ok to post');
+         } else {
+        FB.login(function(response) {
+          if (response.session) {
+            // console.log('user logged in');
+          } else {
+            // console.log('canceled login');
+          }
+        });
+          }
         });
 
         window.setTimeout(function() {
