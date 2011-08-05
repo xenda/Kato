@@ -154,7 +154,9 @@ function streamPublish(name, caption, link, description, picture){
             display : 'iframe',
             access_token: fb_token
           }, function(response){
-            //$(window).scrollTop(scroll);
+            $(window).scrollTop(scroll);
+            $('.fb_dialog').first().remove();
+            console.log($('.fb_dialog'));
           });
         //http://developers.facebook.com/docs/reference/dialogs/feed/
 }
