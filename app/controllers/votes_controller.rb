@@ -5,7 +5,12 @@ class VotesController < InheritedResources::Base
   respond_to :js, :only => :create
   #after_filter :send_to_pusher
 
-before_filter :setup_code
+  before_filter :setup_code
+  before_filter  :set_p3p
+
+    def set_p3p
+      response.headers["P3P"]='CP="CAO PSA OUR"'
+    end
 
   def setup_code
 
