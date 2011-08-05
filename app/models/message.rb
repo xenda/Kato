@@ -44,4 +44,8 @@ class Message < ActiveRecord::Base
     end
   end
 
+  def user
+    User.where(:facebook_token => self.token.to_s).first
+  end
+
 end

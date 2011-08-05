@@ -420,7 +420,7 @@ p.description {
 
 #messages_list h3 {
 	margin-top: 0px;	
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	font-size: 35px;
 	line-height: 1em;
 }
@@ -1044,6 +1044,7 @@ div.photo_zone {
 	text-align: center;
 	height: 110px;
 	overflow: hidden;
+  position: relative;
 }
 div.meta_data {
 	padding: 5px 5px;
@@ -1188,6 +1189,12 @@ div.content ul li {
 div.photo_zone a {
 	height: 110px;
 	display: block;
+}
+
+div.photo_zone img.author_picture{
+  position: absolute;
+  left: 0;
+  bottom: 1px;
 }
 
 .tooltip {

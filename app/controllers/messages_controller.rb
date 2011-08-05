@@ -75,7 +75,6 @@ class MessagesController < InheritedResources::Base
 
   def show
     @message = Message.find(params[:id])
-    @user = User.where(:facebook_token => @message.token.to_s).first
     render :show, :layout => "open_graph"
   end
 

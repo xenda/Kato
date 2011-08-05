@@ -8,7 +8,7 @@
 .inner
   #messages_list
     %h3{:class=>recipe_color(@message)}= @message.title.humanize
-    - if @user
+    - if @message.user
       %p.published
         Publicado por
         %strong #{@user.name.titleize}
