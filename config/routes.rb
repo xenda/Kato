@@ -31,6 +31,7 @@ Kato::Application.routes.draw do
   match "/recetas/:id", :to => "messages#show", :via => "post"
   match "/recetas/:id", :to => "messages#show", :via => "get", :as => :facebook_recipe
   match "/recetas", :to => "messages#index", :via => "get", :as => :facebook_recipes
+  match "/recetas", :to => "messages#index", :via => "post"
   match "/nueva_receta", :to => "messages#add", :via => ["post", "get"], :as => :add_recipes
   root :to => "home#index"
 end
