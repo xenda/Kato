@@ -107,7 +107,14 @@ $(function(){
 
 $('a.twitter_icon').click(function(event){
   event.preventDefault();
-  openWindow($(this).attr('href'), 'social', 550, 300);
+  console.log($(this).attr('href'));
+  $.fancybox({
+    'href': $(this).attr('href'),
+    'type': 'iframe',
+    'width': 550,
+    'height': 300,
+    'padding' : 0
+  });
 });
 
 $('a.facebook_icon').click(function(event){
