@@ -4,6 +4,12 @@ class MessagesController < InheritedResources::Base
   #after_filter :send_to_pusher, :only => :create
   before_filter :load_most_voted
   before_filter :setup_code
+  before_filter  :set_p3p
+
+  def set_p3p
+    response.headers["P3P"]='CP="CAO PSA OUR"'
+  end
+
 
   def setup_code
 

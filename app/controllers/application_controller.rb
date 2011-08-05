@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
 
   before_filter :load_most_voted
+  before_filter  :set_p3p
+
+  def set_p3p
+    response.headers["P3P"]='CP="CAO PSA OUR"'
+  end
+
 
   def authenticated?
       !current_user.blank?
@@ -14,7 +20,7 @@ class ApplicationController < ActionController::Base
     unless current_user
         if cookies.permanent["fbtoken"]
           resource = User.find_by_facebook_token(cookies.permanent["fbtoken"])
-          if resource          
+          if resource
             if User.respond_to?(:serialize_into_cookie)
               resource.remember_me!
               cookies.signed["remember_user_token"] = {
