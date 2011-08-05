@@ -1,7 +1,7 @@
 %li.message{:id => "message_#{message.id}", :title => message.title, :class => truncating_text_class(message.title)}
   .share_zone
     .title
-      = link_to truncate(message.title, :length => 15), message, :title => message.title
+      = link_to truncate(message.title, :length => 15), message, :title => message.title, :rel => message.title
     .icons
       = link_to "Facebook", facebook_recipe_url(message), :class => "facebook_icon"
       = link_to "Twitter", "http://twitter.com/share?url=#{URI.escape(message_url(message))}", :class => "twitter_icon"
