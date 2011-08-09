@@ -6,7 +6,8 @@ function openWindow(url, name, width, height){
     'type': 'iframe',
     'width': width,
     'height': height,
-    'padding' : 0
+    'padding' : 0,
+    'onStart': function(){}
   });
   /*
 	centerWidth = (window.screen.width - width)/2;
@@ -38,10 +39,6 @@ function openWindow2(url, name, width, height){
 }
 
 $(function(){
-
-  window.setTimeout(function() {
-    $('.fb_dialog').css({'top':'82.5px', 'left':'116.5px'});
-  }, 500);
 
   $('.title a, .photo_zone a, #footer a.terms_button, #new_message_button, .additional a').click(function(event){
     event.preventDefault();
