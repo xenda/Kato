@@ -7,7 +7,7 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 require 'csv'
 
-CSV.foreach("ganadores.csv", :headers => true) do |row|
+CSV.foreach("base2.csv", :headers => true) do |row|
       fields = *row.fields
       fields = fields.map &:strip
       document_type, document_number, middle_name, last_name, name = fields
