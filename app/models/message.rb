@@ -9,7 +9,7 @@ class Message < ActiveRecord::Base
   validates_presence_of :title, :on => :create, :message => "debes agregar un nombre"
 
   has_attached_file :photo,
-    :styles => {:thumb => "180x150#", :big => "570x300#"},
+    :styles => {:thumb => "155x150#", :big => "570x300#"},
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :path => '/:attachment/:id/:filename'
