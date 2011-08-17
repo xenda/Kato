@@ -17,7 +17,7 @@ CSV.foreach("mundosueldo.csv", :headers => true) do |row|
       unless Client.find_by_document_number(document_number) 
       	
       	#Client.create(:document_number => document_number, :document_type => document_type, :middle_name => "", :last_name => "", :name => "")
-      	Client.insert_sql("INSERT INTO clients (document_number, document_type) VALUES ('#{document_number}','L')")
+      	Client.connection.insert_sql("INSERT INTO clients (document_number, document_type) VALUES ('#{document_number}','L')")
       	puts "Inserting #{document_number}"
       	# logger.info "#{x} - #{document_number}"
       	# say "#{x} - #{document_number}"
