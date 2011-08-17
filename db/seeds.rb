@@ -13,7 +13,7 @@ CSV.foreach("mundosueldo.csv", :headers => true) do |row|
       document_type, document_number, middle_name, last_name, name = fields
       # puts document_number
       unless Client.find_by_document_number(document_number) 
-      	Client.create(:document_number => document_number, :document_type => document_type, :middle_name => middle_name, :last_name => last_name, :name => name)
+      	Client.create(:document_number => document_number, :document_type => document_type, :middle_name => "", :last_name => "", :name => "")
       	x +=1
       	puts "#{x} - #{document_number}"
       	# logger.info "#{x} - #{document_number}"
