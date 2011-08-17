@@ -1,8 +1,8 @@
 %h1 Sube tu receta
 
 .info
-  Coloca tu número de DNI para poder subir tu receta. Recuerda que debes tener una Cuenta Ganadora para participar.
-  = link_to "Entérate cómo adquirirla aquí", "http://bbvacontinental.pe/tlpu/jsp/pe/esp/paratiN/depositos/cahorro/ahorrsupdep/index.jsp", :target => "_blank"
+  Coloca tu número de DNI para poder subir tu receta. Recuerda que debes tener una Cuenta Ganadora, Mundo Sueldo o Tarjeta de Crédito para participar para participar.
+  = link_to "Entérate cómo adquirir una Cuenta Ganadora aquí", "http://bbvacontinental.pe/tlpu/jsp/pe/esp/paratiN/depositos/cahorro/ahorrsupdep/index.jsp", :target => "_blank"
 
 = simple_form_for @message, :url => verify_messages_path ,:html =>{:multipart => true} do |f|
   - if flash[:not_found]
