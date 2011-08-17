@@ -7,11 +7,13 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 require 'csv'
 
-CSV.foreach("base2.csv", :headers => true) do |row|
+CSV.foreach("bd2.csv", :headers => true) do |row|
       fields = *row.fields
       fields = fields.map &:strip
       document_type, document_number, middle_name, last_name, name = fields
       # puts document_number
-      Client.create(:document_number => document_number, :document_type => document_type, :middle_name => middle_name, :last_name => last_name, :name => name)
+      unless Client.find_by_document_number(document_number) 
+      	Client.create(:document_number => document_number, :document_type => document_type, :middle_name => middle_name, :last_name => last_name, :name => name)
+      end
       # Client.connection.execute("insert into clients (document_number, document_type, middle_name, last_name, name) values ('#{document_number}','#{document_type}','#{middle_name}','#{last_name}','#{name}')")
 end
