@@ -8,7 +8,7 @@
 require 'csv'
 x = 0
 inserts = []
-CSV.foreach("mundosueldo.csv", :headers => true) do |row|
+CSV.foreach("mundo_sueldo.csv", :headers => true) do |row|
 	fields = *row.fields
 	fields = fields.map &:strip
 	document_number = fields.first
