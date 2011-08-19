@@ -95,7 +95,7 @@ class MessagesController < InheritedResources::Base
       redirect_to new_message_path
     else
       @message = Message.new(params[:message])
-      flash[:not_found] = "Lo sentimos, Usted no es cliente de Cuenta Ganadora, Mundo Sueldo o Tarjeta de Crédito."
+      flash[:not_found] = "Lo sentimos, Usted no es cliente de Cuenta Ganadora, Mundo Sueldo o Tarjeta de Cr&eacute;dito."
       render :add
     end
   end
