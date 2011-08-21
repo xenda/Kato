@@ -40,7 +40,7 @@ gem "haml-rails"
 gem "jammit"
 gem "jquery-rails"
 # gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
-# gem 'activeadmin'
+gem 'activeadmin'
 gem "simple_form"
 gem "inherited_resources"
 gem "fb_graph"
