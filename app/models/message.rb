@@ -2,7 +2,6 @@ class Message < ActiveRecord::Base
 
   # associations
   belongs_to :user
-  belongs_to :category
   has_many :ingredients
   accepts_nested_attributes_for :ingredients
 
