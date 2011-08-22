@@ -1,15 +1,16 @@
 ActiveAdmin.register Message do
 
   index do
-    column :title do |post|
-      auto_link(post)
+    column :title do |message|
+      auto_link(message)
     end
-    column :user do |post|
-      post.try(:user).try(:email)
+    column :content do |message|
+      simple_format truncate(message.content, :length => 40)
     end
-    column :photo do |post|
-      image_tag post.photo.url(:default)
+    column :user do |message|
+      message.try(:user).try(:email)
     end
+    column :created_at
     column :published
   end
 
