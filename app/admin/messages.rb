@@ -13,7 +13,7 @@ ActiveAdmin.register Message do
     column :created_at
     column :published
   end
-
+=begin
   show do
     div do
       message.try(:user).try(:email)
@@ -36,5 +36,5 @@ ActiveAdmin.register Message do
     end
     f.buttons
   end
-  
+=end  
 end
