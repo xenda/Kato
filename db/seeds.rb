@@ -8,10 +8,10 @@
 require 'csv'
 
 inserts = []
-CSV.foreach("mundo_sueldo.csv", :headers => true) do |row|
+CSV.foreach("pan_19_08.csv", :headers => true) do |row|
 	fields = *row.fields
 	fields = fields.map &:strip
-	document_number = fields.first
+	document_number = fields[1]
 	# puts "#{x} - #{document_number}"
 	# unless Client.find_by_document_number(document_number) 
     inserts.push "('#{document_number}','L')"   	
