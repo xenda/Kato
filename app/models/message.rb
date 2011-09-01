@@ -1,3 +1,5 @@
+# encoding: UTF-8
+ 
 class Message < ActiveRecord::Base
 
   # associations
@@ -31,7 +33,7 @@ class Message < ActiveRecord::Base
 
   def twitter_link
     link = "http://twitter.com/share?text="
-    link << CGI::escape("Vota por mi receta M&aacute;s Buena que el Pan en @PeruGourmetBBVA haciendo click aqu&iacute; ")
+    link << CGI::escape("Vota por mi receta Más Buena que el Pan en @PeruGourmetBBVA haciendo click aquí ")
     link << "&url="
     link << URI.escape("http://apps.facebook.com/masbuenoqueelpan/recetas/#{self.id}")
     link
