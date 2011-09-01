@@ -30,8 +30,9 @@ class Message < ActiveRecord::Base
   end
 
   def twitter_link
-    link = "http://twitter.com/share?url="
+    link = "http://twitter.com/share?text="
     link << URI.escape("Vota por mi receta M&acute;s Buena que el Pan en @PeruGourmetBBVA haciendo click aqu&iacute; ")
+    link << "&url="
     link << URI.escape("http://apps.facebook.com/masbuenoqueelpan/recetas/#{self.id}")
     link
   end
