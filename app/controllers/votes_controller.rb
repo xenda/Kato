@@ -8,6 +8,8 @@ class VotesController < InheritedResources::Base
   before_filter :setup_code
   before_filter  :set_p3p
 
+  #after_filter :update_votes_count
+
     def set_p3p
       response.headers["P3P"]='CP="CAO PSA OUR"'
     end
@@ -107,5 +109,12 @@ class VotesController < InheritedResources::Base
       Pusher['alpha-skunk'].trigger!('vote:create', {:message_id => @vote.message_id, :votes_count => @message.votes_count})
     end
   end
-
+=begin
+  def update_votes_count
+    if message = Message.find(@vote.message_id)
+      message.votes_count = Vote.where(:message_id => @vote.message_id).count
+      message.save
+    end
+  end
+=end
 end
