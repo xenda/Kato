@@ -48,4 +48,4 @@ gem 'rails-footnotes', '>= 3.7', :group => :development
 gem 'pusher'
 gem 'paperclip'
 gem 'aws-s3'
-gem "will_paginate", "~> 3.0.pre4"
+#gem "will_paginate", "~> 3.0.pre4"

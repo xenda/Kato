@@ -1,17 +1,20 @@
 ActiveAdmin.register Message do
 
   index do
-    column :title do |message|
+    column 'Titulo', :title do |message|
       auto_link(message)
     end
-    column :content do |message|
+    column 'Contenido', :content do |message|
       simple_format truncate(message.content, :length => 40)
     end
-    column :user do |message|
+    column 'Usuario', :user do |message|
       message.try(:user).try(:email)
     end
-    column :created_at
-    column :published
+    column 'Fecha de creacion', :created_at
+    column 'Votos', :votes do |message|
+      message.try(:votes_count)
+    end
+    column 'Publicado', :published
   end
 
   show do
@@ -36,6 +39,14 @@ ActiveAdmin.register Message do
       f.input :token
     end
     f.buttons
+  end
+
+  csv do
+    column('Votos') { |message| message.try(:votes_count) }
+    column('Titulo') { |message| message.title }
+    column('E-Mail') { |message| message.try(:user).try(:email) }
+    column('Usuario') { |message| message.try(:user).try(:name) }
+    column('Contenido') { |message| message.content }
   end
   
 end
