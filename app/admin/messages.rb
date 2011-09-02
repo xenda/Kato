@@ -11,9 +11,7 @@ ActiveAdmin.register Message do
       message.try(:user).try(:email)
     end
     column 'Fecha de creacion', :created_at
-    column 'Votos', :votes do |message|
-      message.votes_count.to_s
-    end
+    column 'Votos', :votes_count
     column 'Publicado', :published
   end
 
