@@ -217,6 +217,7 @@ DEPENDENCIES
   inherited_resources
   jammit
   jquery-rails
+  kaminari
   mysql2 (= 0.2.10)
   oauth2!
   paperclip

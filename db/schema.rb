@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110805154304) do
+ActiveRecord::Schema.define(:version => 20110901170541) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20110805154304) do
     t.datetime "photo_updated_at"
     t.string   "photo_content_type"
     t.boolean  "published",          :default => false, :null => false
+    t.integer  "category_id"
     t.string   "token"
   end
 
