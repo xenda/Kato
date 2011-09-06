@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110901170541) do
+ActiveRecord::Schema.define(:version => 20110906165139) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20110901170541) do
     t.boolean  "published",          :default => false, :null => false
     t.integer  "category_id"
     t.string   "token"
+    t.integer  "final_count"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

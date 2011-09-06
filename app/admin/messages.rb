@@ -11,7 +11,7 @@ ActiveAdmin.register Message do
       message.try(:user).try(:email)
     end
     column 'Fecha de creacion', :created_at
-    column 'Votos', :votes_count
+    column 'Votos Finales', :final_count
     column 'Publicado', :published
   end
 
@@ -40,7 +40,7 @@ ActiveAdmin.register Message do
   end
 
   csv do
-    column('Votos') { |message| message.votes_count.to_s }
+    column('Votos') { |message| message.final_count.to_s }
     column('Titulo') { |message| message.title }
     column('E-Mail') { |message| message.try(:user).try(:email) }
     column('Usuario') { |message| message.try(:user).try(:name) }

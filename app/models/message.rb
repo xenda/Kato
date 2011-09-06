@@ -6,7 +6,8 @@ class Message < ActiveRecord::Base
   belongs_to :user
   has_many :ingredients
   accepts_nested_attributes_for :ingredients
-
+  has_many :votes
+  
   validates_presence_of :title, :on => :create, :message => "debes agregar un nombre"
 
   has_attached_file :photo,
