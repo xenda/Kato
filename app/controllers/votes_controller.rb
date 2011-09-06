@@ -73,7 +73,8 @@ class VotesController < InheritedResources::Base
     @message = @vote.message
     if Vote.where(:token => fb_token, :message_id => @vote.message_id).all.empty?
       logger.info "Ok"
-      create!
+      #create!
+      render :nothing => true
     else
       render :nothing => true
     end
